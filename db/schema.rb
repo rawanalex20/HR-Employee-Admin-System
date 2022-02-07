@@ -10,14 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_02_07_001508) do
+ActiveRecord::Schema.define(version: 2022_02_07_072606) do
 
   create_table "divisions", force: :cascade do |t|
     t.string "name"
     t.string "description"
-    t.string "manager"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "manager_id"
+    t.index ["manager_id"], name: "index_divisions_on_manager_id"
   end
 
   create_table "employees", force: :cascade do |t|
@@ -65,6 +66,7 @@ ActiveRecord::Schema.define(version: 2022_02_07_001508) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "divisions", "employees", column: "manager_id"
   add_foreign_key "employees", "divisions"
   add_foreign_key "employees", "teams"
   add_foreign_key "targets", "teams"
