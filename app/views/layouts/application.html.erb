@@ -7,9 +7,69 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+
+    <style>
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+th, td {
+  text-align: left;
+  padding: 16px;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+  border: 1px solid #ddd;
+}
+.sidenav {
+  width: 130px;
+  position: fixed;
+  background: #eee;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #064579;
+}
+
+.main {
+  margin-left: 140px; /* Same width as the sidebar + left position in px */
+  font-size: 20px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>
+
   </head>
 
   <body>
+  <div class="sidenav">
+    <a href="./home">Home</a>
+    <a href="./divisions">Divisions</a>
+    <a href="./employees">Employees</a>
+    <a href="./targets">Targets</a>
+    <a href="./teams">Teams</a>
+    <a href="./users">Users</a>
+  </div>
+  <div class="main">
     <%= yield %>
+  </div>
   </body>
 </html>

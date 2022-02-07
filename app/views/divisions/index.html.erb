@@ -3,12 +3,28 @@
 <h1>Divisions</h1>
 
 <div id="divisions">
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Manager</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
   <% @divisions.each do |division| %>
-    <%= render division %>
-    <p>
-      <%= link_to "Show this division", division %>
-    </p>
+    <tr>
+    <td><%= division.name %></td>
+    <td><%= division.description %></td>
+    <td><%= division.manager %></td>
+    <td><%= link_to "Show", division %></td>
+    <td><%= link_to "Edit", edit_division_path(division) %></td>
+    <td><%= button_to "Delete", division, method: :delete %></td>
+    </tr>
+    
   <% end %>
+</table>
 </div>
 
 <%= link_to "New division", new_division_path %>

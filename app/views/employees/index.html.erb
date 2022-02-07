@@ -3,12 +3,36 @@
 <h1>Employees</h1>
 
 <div id="employees">
-  <% @employees.each do |employee| %>
-    <%= render employee %>
-    <p>
-      <%= link_to "Show this employee", employee %>
-    </p>
-  <% end %>
+<table>
+<tr>
+  <th>Name</th>
+  <th>Email</th>
+  <th>Job</th>
+  <th>Salary</th>
+  <th>Employment status</th>
+  <th>Division</th>
+  <th>Team</th>
+  <th></th>
+  <th></th>
+  <th></th>
+</tr>
+
+<% @employees.each do |employee| %>
+  <tr>
+  <td><%= employee.name %></td>
+  <td><%= employee.email %></td>
+  <td><%= employee.salary %></td>
+  <td><%= employee.job %></td>
+  <td><%= employee.employment_status %></td>
+  <td><%= employee.division_id %></td>
+  <td><%= employee.team_id %></td>
+  <td><%= link_to "Show", employee %></td>
+  <td><%= link_to "Edit", edit_employee_path(employee) %></td>
+  <td><%= button_to "Delete", employee, method: :delete %></td>
+  </tr>
+  
+<% end %>
+</table>
 </div>
 
 <%= link_to "New employee", new_employee_path %>
