@@ -60,13 +60,14 @@ tr:nth-child(even) {
   </head>
 
   <body>
+  <base href="http://127.0.0.1:3000/" />
   <div class="sidenav">
-    <a href="./home">Home</a>
-    <a href="./divisions">Divisions</a>
-    <a href="./employees">Employees</a>
-    <a href="./targets">Targets</a>
-    <a href="./teams">Teams</a>
-    <a href="./users">Users</a>
+    <a href="/home">Home</a>
+    <a href="/divisions">Divisions</a>
+    <a href="/employees">Employees</a>
+    <a href="/targets">Targets</a>
+    <a href="/teams">Teams</a>
+    <a href="/users">Users</a>
   </div>
   <div class="main">
     <%= yield %>
