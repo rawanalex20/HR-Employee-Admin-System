@@ -19,9 +19,15 @@
     <%= target.finish_date %>
   </p>
 
+  <% tm = Team.find_by(id:target.team_id) %>
+    <% team = nil %>
+    <% unless tm == nil then%>
+      <% team = tm.name %>
+    <% end %>
+
   <p>
     <strong>Team:</strong>
-    <%= target.team_id %>
+    <%= team %>
   </p>
 
   <p>

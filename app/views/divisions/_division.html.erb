@@ -9,9 +9,14 @@
     <%= division.description %>
   </p>
 
+  <% employee = Employee.find_by(id:division.manager_id) %>
+    <% manager = nil %>
+    <% unless employee == nil then%>
+      <% manager = employee.name %>
+    <% end %>
   <p>
     <strong>Manager:</strong>
-    <%= division.manager_id %>
+    <%= manager %>
   </p>
 
 </div>
