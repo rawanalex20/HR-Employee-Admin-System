@@ -52,9 +52,9 @@ ActiveRecord::Schema.define(version: 2022_02_07_001508) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "division_id", null: false
-    t.integer "team_lead"
+    t.integer "team_lead_id"
     t.index ["division_id"], name: "index_teams_on_division_id"
-    t.index ["team_lead"], name: "index_teams_on_team_lead"
+    t.index ["team_lead_id"], name: "index_teams_on_team_lead_id"
   end
 
   create_table "users", force: :cascade do |t|
