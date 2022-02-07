@@ -18,11 +18,16 @@
 
   <% @targets.each do |target| %>
     <tr>
+    <% tm = Team.find_by(id:target.team_id) %>
+    <% team = nil %>
+    <% unless tm == nil then%>
+      <% team = tm.name %>
+    <% end %>
     <td><%= target.title %></td>
     <td><%= target.description %></td>
     <td><%= target.start_date %></td>
     <td><%= target.finish_date %></td>
-    <td><%= target.team_id %></td>
+    <td><%= team %></td>
     <td><%= target.status %></td>
     <td><%= link_to "Show", target %></td>
     <td><%= link_to "Edit", edit_target_path(target) %></td>

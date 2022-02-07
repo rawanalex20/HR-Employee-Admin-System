@@ -19,13 +19,23 @@
 
 <% @employees.each do |employee| %>
   <tr>
+  <% div = Division.find_by(id:employee.division_id) %>
+  <% division = nil %>
+  <% unless div == nil then%>
+    <% division = div.name %>
+  <% end %>
+  <% tm = Team.find_by(id:employee.team_id) %>
+  <% team = nil %>
+  <% unless tm == nil then%>
+    <% team = tm.name %>
+  <% end %>
   <td><%= employee.name %></td>
   <td><%= employee.email %></td>
   <td><%= employee.salary %></td>
   <td><%= employee.job %></td>
   <td><%= employee.employment_status %></td>
-  <td><%= employee.division_id %></td>
-  <td><%= employee.team_id %></td>
+  <td><%= division %></td>
+  <td><%= team %></td>
   <td><%= link_to "Show", employee %></td>
   <td><%= link_to "Edit", edit_employee_path(employee) %></td>
   <td><%= button_to "Delete", employee, method: :delete %></td>

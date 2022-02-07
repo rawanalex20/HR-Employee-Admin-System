@@ -15,9 +15,14 @@
 
   <% @divisions.each do |division| %>
     <tr>
+    <% employee = Employee.find_by(id:division.manager_id) %>
+    <% manager = nil %>
+    <% unless employee == nil then%>
+      <% manager = employee.name %>
+    <% end %>
     <td><%= division.name %></td>
     <td><%= division.description %></td>
-    <td><%= division.manager_id %></td>
+    <td><%= manager %></td>
     <td><%= link_to "Show", division %></td>
     <td><%= link_to "Edit", edit_division_path(division) %></td>
     <td><%= button_to "Delete", division, method: :delete %></td>
