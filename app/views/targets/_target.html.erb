@@ -11,12 +11,12 @@
 
   <p>
     <strong>Start date:</strong>
-    <%= target.start_date %>
+    <%= target.start_date.strftime("%Y-%m-%d") %>
   </p>
 
   <p>
     <strong>Finish date:</strong>
-    <%= target.finish_date %>
+    <%= target.finish_date.strftime("%Y-%m-%d") %>
   </p>
 
   <% tm = Team.find_by(id:target.team_id) %>

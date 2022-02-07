@@ -25,8 +25,8 @@
     <% end %>
     <td><%= target.title %></td>
     <td><%= target.description %></td>
-    <td><%= target.start_date %></td>
-    <td><%= target.finish_date %></td>
+    <td><%= target.start_date.strftime("%Y-%m-%d") %></td>
+    <td><%= target.finish_date.strftime("%Y-%m-%d") %></td>
     <td><%= team %></td>
     <td><%= target.status %></td>
     <td><%= link_to "Show", target %></td>
