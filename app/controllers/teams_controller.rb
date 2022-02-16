@@ -49,6 +49,16 @@ class TeamsController < ApplicationController
 
   # DELETE /teams/1 or /teams/1.json
   def destroy
+    targets = Target.where(team_id: @team.id)
+    targets.each do |target|
+      target.team_id = nil
+      target.save
+    end
+    employees = Employee.where(team_id: @team.id)
+    employees.each do |employee|
+      employee.team_id = nil
+      employee.save
+    end
     @team.destroy
 
     respond_to do |format|
