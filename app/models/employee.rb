@@ -5,5 +5,6 @@ class Employee < ApplicationRecord
 
     belongs_to :team, optional: true
     belongs_to :division
+    has_one :division, foreign_key: "manager_id"
     has_one :team
 end
