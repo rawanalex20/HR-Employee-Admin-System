@@ -4,7 +4,7 @@ class Employee < ApplicationRecord
     validates :job, presence: true
 
     belongs_to :team, optional: true
-    belongs_to :division
+    belongs_to :division#, optional: true
     has_one :division, foreign_key: "manager_id"
-    has_one :team
+    has_one :team, foreign_key: "team_lead_id"
 end
