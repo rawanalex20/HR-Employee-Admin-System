@@ -1,6 +1,6 @@
 class Division < ApplicationRecord
     validates :name, presence: true
-    validates :manager_id, uniqueness: true
+    # validates :manager_id, uniqueness: true
     
     has_many :teams, dependent: :destroy
     has_many :employees, foreign_key: "employee_id"

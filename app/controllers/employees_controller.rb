@@ -49,9 +49,16 @@ class EmployeesController < ApplicationController
 
   # DELETE /employees/1 or /employees/1.json
   def destroy
-    div = Division.find_by(id:@employee.division_id)
-    div.manager_id = nil
-    div.save
+    divs = Division.where(manager_id: @employee.id)
+    divs.each do |div|
+      div.manager_id = nil
+      div.save
+    end
+    teams = Team.where(team_lead_id: @employee.id)
+    teams.each do |team|
+      team.team_lead_id = nil
+      team.save
+    end
     @employee.destroy
 
     respond_to do |format|
