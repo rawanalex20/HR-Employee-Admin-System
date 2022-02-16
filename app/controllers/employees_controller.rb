@@ -22,6 +22,8 @@ class EmployeesController < ApplicationController
   # POST /employees or /employees.json
   def create
     @employee = Employee.new(employee_params)
+    
+    p "lsdkgm", @employee.division_id
 
     respond_to do |format|
       if @employee.save
