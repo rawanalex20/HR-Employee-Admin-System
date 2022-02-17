@@ -37,6 +37,15 @@ class EmployeesController < ApplicationController
   # PATCH/PUT /employees/1 or /employees/1.json
   def update
     respond_to do |format|
+      div = @employee.division_id
+      if @employee.update(employee_params)
+        unless @employee.division_id == div
+          Division.where(manager_id: @employee.id).each do |division|
+            division.manager_id = nil
+            division.save
+          end
+        end
+        
         format.html { redirect_to employee_url(@employee), notice: "Employee was successfully updated." }
         format.json { render :show, status: :ok, location: @employee }
       else
