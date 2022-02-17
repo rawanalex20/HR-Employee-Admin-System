@@ -37,7 +37,6 @@ class EmployeesController < ApplicationController
   # PATCH/PUT /employees/1 or /employees/1.json
   def update
     respond_to do |format|
-      if @employee.update(employee_params)
         format.html { redirect_to employee_url(@employee), notice: "Employee was successfully updated." }
         format.json { render :show, status: :ok, location: @employee }
       else
@@ -49,16 +48,6 @@ class EmployeesController < ApplicationController
 
   # DELETE /employees/1 or /employees/1.json
   def destroy
-    divs = Division.where(manager_id: @employee.id)
-    divs.each do |div|
-      div.manager_id = nil
-      div.save
-    end
-    teams = Team.where(team_lead_id: @employee.id)
-    teams.each do |team|
-      team.team_lead_id = nil
-      team.save
-    end
     @employee.destroy
 
     respond_to do |format|
