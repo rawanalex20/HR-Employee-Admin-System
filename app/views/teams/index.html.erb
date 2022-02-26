@@ -7,7 +7,6 @@
   <tr>
     <th>Name</th>
     <th>Description</th>
-    <th>Division </th>
     <th>Team lead </th>
     <th></th>
     <th></th>
@@ -16,11 +15,6 @@
 
   <% @teams.each do |team| %>
     <tr>
-    <% div = Division.find_by(id:team.division_id) %>
-  <% division = nil %>
-  <% unless div == nil then%>
-    <% division = div.name %>
-  <% end %>
   <% employee = Employee.find_by(id:team.team_lead_id) %>
     <% lead = nil %>
     <% unless employee == nil then%>
@@ -28,7 +22,6 @@
     <% end %>
     <td><%= team.name %></td>
     <td><%= team.description %></td>
-    <td><%= division %></td>
     <td><%= lead %></td>
     <td><%= link_to "Show", team %></td>
     <td><%= link_to "Edit", edit_team_path(team) %></td>
