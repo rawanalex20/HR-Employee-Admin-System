@@ -46,12 +46,19 @@ class DivisionsController < ApplicationController
 
   # PATCH/PUT /divisions/1 or /divisions/1.json
   def update
+    teams = @division.teams
+    teams.each do |team|
+      team.division = nil
+      team.save
+    end
     params[:division]["teams"].shift
     teams = params[:division]["teams"]
     teams.each_index do |index|
       team = Team.find(teams[index])
       params[:division]["teams"][index] = team
     end
+
+    
     
     respond_to do |format|
       if @division.update(division_params)
