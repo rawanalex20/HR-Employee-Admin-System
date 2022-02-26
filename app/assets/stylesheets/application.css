@@ -23,6 +23,7 @@
   
   th, td {
     text-align: left;
+    vertical-align: bottom;
     padding: 16px;
   }
   

@@ -21,14 +21,18 @@
     <% unless employee == nil then%>
       <% lead = employee.name %>
     <% end %>
-    <% employees = [] %>
-    <% team.employees.each do |employee| %>
-      <% employees.append(employee.name)%>
-    <% end%>
+    
     <td><%= team.name %></td>
     <td><%= team.description %></td>
     <td><%= lead %></td>
-    <td><%= employees.join(', ') %></td>
+    <td>
+    <% employees = [] %>
+    <% team.employees.each do |employee| %>
+      <div>
+      <%= employee.name%>
+      </div>
+    <% end%>
+    </td>
     <td><%= link_to "Show", team %></td>
     <td><%= link_to "Edit", edit_team_path(team) %></td>
     <td><%= button_to "Delete", team, method: :delete %></td>
