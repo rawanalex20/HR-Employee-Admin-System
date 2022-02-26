@@ -1,0 +1,38 @@
+<div id="<%= dom_id employee %>">
+  <p>
+    <strong>Email:</strong>
+    <%= employee.email %>
+  </p>
+
+  <p>
+    <strong>Name:</strong>
+    <%= employee.name %>
+  </p>
+
+  <p>
+    <strong>Job:</strong>
+    <%= employee.job %>
+  </p>
+
+  <p>
+    <strong>Salary:</strong>
+    <%= employee.salary %>
+  </p>
+
+  <p>
+    <strong>Employment status:</strong>
+    <%= employee.employment_status %>
+  </p>
+
+  <% tm = Team.find_by(id:employee.team_id) %>
+  <% team = nil %>
+  <% unless tm == nil then%>
+    <% team = tm.name %>
+  <% end %>
+
+  <p>
+    <strong>Team:</strong>
+    <%= team %>
+  </p>
+
+</div>

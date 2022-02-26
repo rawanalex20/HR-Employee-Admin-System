@@ -1,0 +1,45 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Teams</h1>
+
+<div id="teams">
+  <table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Team lead </th>
+    <th>Members </th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+  <% @teams.each do |team| %>
+    <tr>
+  <% employee = Employee.find_by(id:team.team_lead_id) %>
+    <% lead = nil %>
+    <% unless employee == nil then%>
+      <% lead = employee.name %>
+    <% end %>
+    
+    <td><%= team.name %></td>
+    <td><%= team.description %></td>
+    <td><%= lead %></td>
+    <td>
+    <% employees = [] %>
+    <% team.employees.each do |employee| %>
+      <div>
+      <%= employee.name%>
+      </div>
+    <% end%>
+    </td>
+    <td><%= link_to "Show", team %></td>
+    <td><%= link_to "Edit", edit_team_path(team) %></td>
+    <td><%= button_to "Delete", team, method: :delete %></td>
+    </tr>
+    
+  <% end %>
+</table>
+</div>
+
+<%= link_to "New team", new_team_path %>

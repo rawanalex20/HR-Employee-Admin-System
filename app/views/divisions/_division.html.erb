@@ -1,0 +1,22 @@
+<div id="<%= dom_id division %>">
+  <p>
+    <strong>Name:</strong>
+    <%= division.name %>
+  </p>
+
+  <p>
+    <strong>Description:</strong>
+    <%= division.description %>
+  </p>
+
+  <% employee = Employee.find_by(id:division.manager_id) %>
+    <% manager = nil %>
+    <% unless employee == nil then%>
+      <% manager = employee.name %>
+    <% end %>
+  <p>
+    <strong>Manager:</strong>
+    <%= manager %>
+  </p>
+
+</div>
