@@ -57,8 +57,6 @@ class DivisionsController < ApplicationController
       team = Team.find(teams[index])
       params[:division]["teams"][index] = team
     end
-
-    
     
     respond_to do |format|
       if @division.update(division_params)
