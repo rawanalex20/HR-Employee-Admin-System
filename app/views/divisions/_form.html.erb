@@ -29,6 +29,21 @@
   </div>
 
   <div>
+    <%= form.label :teams, style: "display: block" %>
+    <%checks = []%>
+    <% Team.all.to_a.each_index do |index|%>
+      <%if @division.teams.include?(Team.all.to_a[index])%>
+        <%checks.append(index + 1)%>
+      <%end%>
+    <%end%>
+    <%= form.collection_check_boxes :teams, Team.all , :id, :name, checked: checks do |b| %>
+      <div>
+        <%= b.check_box %>
+        <%= b.label %>
+      </div>
+    <%end%>
+
+  <div>
     <%= form.submit %>
   </div>
 <% end %>

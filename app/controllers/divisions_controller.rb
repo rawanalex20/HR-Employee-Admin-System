@@ -21,10 +21,20 @@ class DivisionsController < ApplicationController
 
   # POST /divisions or /divisions.json
   def create
+    params[:division]["teams"].shift
+    teams = params[:division]["teams"]
+    teams.each_index do |index|
+      team = Team.find(teams[index])
+      params[:division]["teams"][index] = team
+    end
     @division = Division.new(division_params)
 
     respond_to do |format|
       if @division.save
+        params[:division]["teams"].each do |team|
+          team.division = @division
+          team.save
+        end
         format.html { redirect_to division_url(@division), notice: "Division was successfully created." }
         format.json { render :show, status: :created, location: @division }
       else
@@ -36,8 +46,19 @@ class DivisionsController < ApplicationController
 
   # PATCH/PUT /divisions/1 or /divisions/1.json
   def update
+    params[:division]["teams"].shift
+    teams = params[:division]["teams"]
+    teams.each_index do |index|
+      team = Team.find(teams[index])
+      params[:division]["teams"][index] = team
+    end
+    
     respond_to do |format|
       if @division.update(division_params)
+        params[:division]["teams"].each do |team|
+          team.division = @division
+          team.save
+        end
         format.html { redirect_to division_url(@division), notice: "Division was successfully updated." }
         format.json { render :show, status: :ok, location: @division }
       else
@@ -65,6 +86,6 @@ class DivisionsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def division_params
-      params.require(:division).permit(:name, :description, :manager_id)
+      params.require(:division).permit(:name, :description, :manager_id, teams:[])
     end
 end
