@@ -19,5 +19,15 @@
     <strong>Team lead:</strong>
     <%= lead %>
   </p>
+  <p>
+    <strong>Members:</strong>
+    <% employees = [] %>
+    <% team.employees.each do |employee| %>
+      <div>
+        <%= employee.name%>
+      </div>
+    <% end%>
+  </p>
+  
 
 </div>
