@@ -18,11 +18,6 @@
 
 <% @employees.each do |employee| %>
   <tr>
-  <% div = Division.find_by(id:employee.division_id) %>
-  <% division = nil %>
-  <% unless div == nil then%>
-    <% division = div.name %>
-  <% end %>
   <% tm = Team.find_by(id:employee.team_id) %>
   <% team = nil %>
   <% unless tm == nil then%>
