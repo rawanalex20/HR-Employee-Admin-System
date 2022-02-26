@@ -37,11 +37,6 @@
   </div>
 
   <div>
-    <%= form.label :division_id, style: "display: block" %>
-    <%= form.collection_select :division_id, Division.all, :id, :name, include_blank: true %>
-  </div>
-
-  <div>
     <%= form.label :team_id, style: "display: block" %>
     <%= form.collection_select :team_id, Team.all, :id, :name, include_blank: true %>
   </div>
