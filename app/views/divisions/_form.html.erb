@@ -1,0 +1,47 @@
+<%= form_with(model: division) do |form| %>
+  <% if division.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(division.errors.count, "error") %> prohibited this division from being saved:</h2>
+
+      <ul>
+        <% division.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :name, style: "display: block" %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.label :description, style: "display: block" %>
+    <%= form.text_field :description %>
+  </div>
+
+  <div>
+    <%= form.label :manager_id, style: "display: block" %>
+    <%= form.collection_select :manager_id, Employee.all , :id, :name, include_blank: true %>
+  </div>
+
+  <div>
+    <%= form.label :teams, style: "display: block" %>
+    <%checks = []%>
+    <% Team.all.to_a.each_index do |index|%>
+      <%if @division.teams.include?(Team.all.to_a[index])%>
+        <%checks.append(index + 1)%>
+      <%end%>
+    <%end%>
+    <%= form.collection_check_boxes :teams, Team.all , :id, :name, checked: checks do |b| %>
+      <div>
+        <%= b.check_box %>
+        <%= b.label %>
+      </div>
+    <%end%>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

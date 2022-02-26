@@ -1,17 +1,8 @@
 # HR Employee Admin System
 
-## Description
+HR Admin System manages human resources and their processes.
 
-HR Admin System manages human resources and their processes. The project contains a simple representation of employees and related data.
-
-## Features
-
-- Basic CRUD with data
-- Navigation through different views 
-- Active Record ORM
-
-
-## Ruby and RoR version
+## Versions
 
 ruby 3.1.0<br>
 Rails 7.0.1
@@ -37,4 +28,6 @@ Run the following command to initialize server<br>
 `rails server`
 
 ## Demo
-..
+
+https://user-images.githubusercontent.com/63899074/155841339-9f97425f-bb28-4557-9904-5f7d67d9000c.mp4
+

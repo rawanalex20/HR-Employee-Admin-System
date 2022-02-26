@@ -1,0 +1,38 @@
+<div id="<%= dom_id target %>">
+  <p>
+    <strong>Title:</strong>
+    <%= target.title %>
+  </p>
+
+  <p>
+    <strong>Description:</strong>
+    <%= target.description %>
+  </p>
+
+  <p>
+    <strong>Start date:</strong>
+    <%= target.start_date.strftime("%Y-%m-%d") %>
+  </p>
+
+  <p>
+    <strong>Finish date:</strong>
+    <%= target.finish_date.strftime("%Y-%m-%d") %>
+  </p>
+
+  <% tm = Team.find_by(id:target.team_id) %>
+    <% team = nil %>
+    <% unless tm == nil then%>
+      <% team = tm.name %>
+    <% end %>
+
+  <p>
+    <strong>Team:</strong>
+    <%= team %>
+  </p>
+
+  <p>
+    <strong>Status:</strong>
+    <%= target.status %>
+  </p>
+
+</div>
