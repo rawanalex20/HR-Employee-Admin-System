@@ -1,8 +1,6 @@
 # HR Employee Admin System
 
-## Description
-
-HR Admin System manages human resources and their processes. The project contains a simple representation of employees and related data.
+HR Admin System manages human resources and their processes.
 
 ## Versions
 
