@@ -23,9 +23,7 @@
 
   <div>
     <%= form.label :manager_id, style: "display: block" %>
-    <% emp = Employee.where(division_id: @division.id) %>
-    <% list = @division.id == nil ? [] : emp %>
-    <%= form.collection_select :manager_id, list , :id, :name, include_blank: true %>
+    <%= form.collection_select :manager_id, Employee.all , :id, :name, include_blank: true %>
   </div>
 
   <div>
