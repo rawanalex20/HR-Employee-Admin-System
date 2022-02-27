@@ -3,6 +3,7 @@
     <strong>Profile:</strong>
     <%if user.profile.attached?%>
       <%= image_tag(user.profile, size: "200x200") %>
+      <%= button_to "Delete profile", delete_profile_user_path(user), method: :delete %>
     <%end%>
   </p>
 
