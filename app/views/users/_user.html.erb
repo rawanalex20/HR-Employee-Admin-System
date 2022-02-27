@@ -1,5 +1,12 @@
 <div id="<%= dom_id user %>">
   <p>
+    <strong>Profile:</strong>
+    <%if user.profile.attached?%>
+      <%= image_tag(user.profile, size: "200x200") %>
+    <%end%>
+  </p>
+
+  <p>
     <strong>Email:</strong>
     <%= user.email %>
   </p>
