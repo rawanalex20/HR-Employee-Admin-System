@@ -1,0 +1,13 @@
+ar:
+  activerecord:
+    attributes:
+      team:
+        name: "اسم الفريق"
+        description: "وصف"
+  
+  globals:
+    forms:
+      messages:
+        errors:
+          one error: "يوجد هنا خطأ"
+          multiple errors: "يوجد هنا أخطاء %{count}"
