@@ -4,7 +4,25 @@ ar:
       team:
         name: "اسم الفريق"
         description: "وصف"
-  
+      division:
+        name: "القطاع"
+        description: "وصف"
+      employee:
+        name: "القطاع"
+        email: "البريد الاكتروني"
+        job: "الوظيفة"
+        salary: "الراتب"
+        employment_status: "الحالة الوظيفية"
+      target:
+        title: "الهدف"
+        description: "وصف"
+        start_date: "تاريخ البداية"
+        finish_date: "تاريخ النهاية"
+        status: "الحالة"
+      user:
+        name: "الاسم"
+        email: "البريد الاكتروني"
+        password: "كلمة السر"
   globals:
     forms:
       messages:
