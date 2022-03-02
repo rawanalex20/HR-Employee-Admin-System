@@ -1,7 +1,12 @@
 <%= form_with(model: user) do |form| %>
   <% if user.errors.any? %>
     <div style="color: red">
-      <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+      <% if division.errors.count == 1%>
+      <% t = 'globals.forms.messages.errors.one error'%>
+      <% else%>
+      <% t = 'globals.forms.messages.errors.multiple errors'%>
+      <% end%>
+      <h2><%= t t, count: division.errors.count, default: 'not exist'%></h2>
 
       <ul>
         <% user.errors.each do |error| %>
