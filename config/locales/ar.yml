@@ -38,3 +38,9 @@ ar:
         errors:
           one error: "يوجد هنا خطأ"
           multiple errors: "يوجد هنا أخطاء %{count}"
+          
+  helpers:
+    submit:
+      create: "إنشاء %{model}"
+      update: "تعديل %{model}"
+
