@@ -1,2 +1,36 @@
 en:
-  hello: "Hello world"
+  divisions:
+    create:
+      success: "Division was successfully created."
+    update: 
+      success: "Division was successfully updated."
+    destroy: 
+      success: "Division was successfully destroyed."
+  employees:
+    create:
+      success: "Employee was successfully created."
+    update: 
+      success: "Employee was successfully updated."
+    destroy: 
+      success: "Employee was successfully destroyed."
+  teams:
+    create:
+      success: "Team was successfully created."
+    update: 
+      success: "Team was successfully updated."
+    destroy: 
+      success: "Team was successfully destroyed."
+  targets:
+    create:
+      success: "Target was successfully created."
+    update: 
+      success: "Target was successfully updated."
+    destroy: 
+      success: "Target was successfully destroyed."
+  users:
+    create:
+      success: "User was successfully created."
+    update: 
+      success: "User was successfully updated."
+    destroy: 
+      success: "User was successfully destroyed."

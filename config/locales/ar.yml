@@ -38,9 +38,44 @@ ar:
         errors:
           one error: "يوجد هنا خطأ"
           multiple errors: "يوجد هنا أخطاء %{count}"
-          
+
   helpers:
     submit:
       create: "إنشاء %{model}"
       update: "تعديل %{model}"
-
+  
+  divisions:
+    create:
+      success: ".أنشئ بنجاح"
+    update: 
+      success: ".تم بنجاح"
+    destroy: 
+      success: ".حذف بنجاح"
+  employees:
+    create:
+      success: ".أنشئ بنجاح"
+    update: 
+      success: ".تم بنجاح"
+    destroy: 
+      success: ".حذف بنجاح"
+  teams:
+    create:
+      success: ".أنشئ بنجاح"
+    update: 
+      success: ".تم بنجاح"
+    destroy: 
+      success: ".حذف بنجاح"
+  targets:
+    create:
+      success: ".أنشئ بنجاح"
+    update: 
+      success: ".تم بنجاح"
+    destroy: 
+      success: ".حذف بنجاح"
+  users:
+    create:
+      success: ".أنشئ بنجاح"
+    update: 
+      success: ".تم بنجاح"
+    destroy: 
+      success: ".حذف بنجاح"
