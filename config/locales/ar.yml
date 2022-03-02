@@ -1,21 +1,29 @@
 ar:
   activerecord:
+    models:
+        division: "القسم"
+        user: "المستخدم"
+        team: "الفريق"
+        employee: "الموظف"
+        target: "الهدف"
     attributes:
       team:
         name: "اسم الفريق"
-        description: "وصف"
+        description: "الوصف"
       division:
-        name: "القطاع"
-        description: "وصف"
+        name: "القسم"
+        description: "الوصف"
+        teams: "الفرق"
+        manager_id: "المدير"
       employee:
-        name: "القطاع"
+        name: "الاسم"
         email: "البريد الاكتروني"
         job: "الوظيفة"
         salary: "الراتب"
         employment_status: "الحالة الوظيفية"
       target:
         title: "الهدف"
-        description: "وصف"
+        description: "الوصف"
         start_date: "تاريخ البداية"
         finish_date: "تاريخ النهاية"
         status: "الحالة"
@@ -23,6 +31,7 @@ ar:
         name: "الاسم"
         email: "البريد الاكتروني"
         password: "كلمة السر"
+
   globals:
     forms:
       messages:
