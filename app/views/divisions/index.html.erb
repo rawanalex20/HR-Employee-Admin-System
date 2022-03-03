@@ -1,14 +1,14 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Divisions</h1>
+<h1><%= t 'Divisions', default: 'not exist'%></h1>
 
 <div id="divisions">
 <table>
   <tr>
-    <th>Name</th>
-    <th>Description</th>
-    <th>Manager</th>
-    <th>Teams</th>
+    <th><%= t'.Name', default: 'not exist'%></th>
+    <th><%= t'.Description', default: 'not exist'%></th>
+    <th><%= t'.Manager', default: 'not exist'%></th>
+    <th><%= t'.Teams', default: 'not exist'%></th>
     <th></th>
     <th></th>
     <th></th>
@@ -32,13 +32,13 @@
       </div>
     <% end%>
     </td>
-    <td><%= link_to "Show", division %></td>
-    <td><%= link_to "Edit", edit_division_path(division) %></td>
-    <td><%= button_to "Delete", division, method: :delete %></td>
+    <td><%= link_to t("Show"), division %></td>
+    <td><%= link_to t("Edit"), edit_division_path(division) %></td>
+    <td><%= button_to t("Delete"), division, method: :delete %></td>
     </tr>
     
   <% end %>
 </table>
 </div>
 
-<%= link_to "New division", new_division_path %>
+<%= link_to t(".New division"), new_division_path %>

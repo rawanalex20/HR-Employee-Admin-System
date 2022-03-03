@@ -1,17 +1,12 @@
 <div id="<%= dom_id user %>">
   <p>
-    <strong>Email:</strong>
+    <strong><%= t 'users.Email', default: 'not exist'%>:</strong>
     <%= user.email %>
   </p>
 
   <p>
-    <strong>Name:</strong>
+    <strong><%= t 'users.Name', default: 'not exist'%>:</strong>
     <%= user.name %>
-  </p>
-
-  <p>
-    <strong>Password:</strong>
-    <%= user.password %>
   </p>
 
 </div>

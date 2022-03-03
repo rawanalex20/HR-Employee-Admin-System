@@ -1,13 +1,12 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Users</h1>
+<h1<%= t 'Users', default: 'not exist'%>></h1>
 
 <div id="users">
 <table>
 <tr>
-  <th>Name</th>
-  <th>Email</th>
-  <th>Password</th>
+  <th><%= t '.Name', default: 'not exist'%></th>
+  <th><%= t '.Email', default: 'not exist'%></th>
   <th></th>
   <th></th>
   <th></th>
@@ -17,14 +16,13 @@
   <tr>
   <td><%= user.name %></td>
   <td><%= user.email %></td>
-  <td><%= user.password %></td>
-  <td><%= link_to "Show", user %></td>
-  <td><%= link_to "Edit", edit_user_path(user) %></td>
-  <td><%= button_to "Delete", user, method: :delete %></td>
+  <td><%= link_to t("Show"), user %></td>
+  <td><%= link_to t("Edit"), edit_user_path(user) %></td>
+  <td><%= button_to t("Delete"), user, method: :delete %></td>
   </tr>
   
 <% end %>
 </table>
 </div>
 
-<%= link_to "New user", new_user_path %>
+<%= link_to t(".New user"), new_user_path %>

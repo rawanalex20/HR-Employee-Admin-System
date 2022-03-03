@@ -1,14 +1,14 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Teams</h1>
+<h1><%= t 'Teams', default: 'not exist'%></h1>
 
 <div id="teams">
   <table>
   <tr>
-    <th>Name</th>
-    <th>Description</th>
-    <th>Team lead </th>
-    <th>Members </th>
+    <th><%= t '.Name', default: 'not exist'%></th>
+    <th><%= t '.Description', default: 'not exist'%></th>
+    <th><%= t '.Team lead', default: 'not exist'%> </th>
+    <th><%= t '.Members', default: 'not exist'%> </th>
     <th></th>
     <th></th>
     <th></th>
@@ -33,13 +33,13 @@
       </div>
     <% end%>
     </td>
-    <td><%= link_to "Show", team %></td>
-    <td><%= link_to "Edit", edit_team_path(team) %></td>
-    <td><%= button_to "Delete", team, method: :delete %></td>
+    <td><%= link_to t("Show"), team %></td>
+    <td><%= link_to t("Edit"), edit_team_path(team) %></td>
+    <td><%= button_to t("Delete"), team, method: :delete %></td>
     </tr>
     
   <% end %>
 </table>
 </div>
 
-<%= link_to "New team", new_team_path %>
+<%= link_to t(".New team"), new_team_path %>

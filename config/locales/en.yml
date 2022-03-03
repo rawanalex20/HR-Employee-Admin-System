@@ -1,4 +1,11 @@
 en:
+  globals:
+    forms:
+      messages:
+        errors:
+          one error: "1 error prohibited this post from being saved:"
+          multiple errors: "%{count} error prohibited this post from being saved:"
+
   divisions:
     create:
       success: "Division was successfully created."
@@ -6,6 +13,16 @@ en:
       success: "Division was successfully updated."
     destroy: 
       success: "Division was successfully destroyed."
+    index:
+      New division: "New division"
+      Name: "Name"
+      Description: "Description"
+      Manager: "Manager"
+      Teams: "Teams"
+    Name: "Name"
+    Description: "Description"
+    Manager: "Manager"
+    Teams: "Teams"
   employees:
     create:
       success: "Employee was successfully created."
@@ -13,6 +30,20 @@ en:
       success: "Employee was successfully updated."
     destroy: 
       success: "Employee was successfully destroyed."
+    index:
+        New employee: "New employee"
+        Name: "Name"
+        Email: "Email"
+        Job: "Job"
+        Salary: "Salary"
+        Employment status: "Employment status"
+        Team: "Team"
+    Name: "Name"
+    Email: "Email"
+    Job: "Job"
+    Salary: "Salary"
+    Employment status: "Employment status"
+    Team: "Team"
   teams:
     create:
       success: "Team was successfully created."
@@ -20,6 +51,16 @@ en:
       success: "Team was successfully updated."
     destroy: 
       success: "Team was successfully destroyed."
+    index:
+        New team: "New team"
+        Name: "Name"
+        Description: "Description"
+        Team lead: "Team lead"
+        Members: "Members"
+    Name: "Name"
+    Description: "Description"
+    Team lead: "Team lead "
+    Members: "Members"
   targets:
     create:
       success: "Target was successfully created."
@@ -27,6 +68,20 @@ en:
       success: "Target was successfully updated."
     destroy: 
       success: "Target was successfully destroyed."
+    index:
+        New target: "New target"
+        Title: "Title"
+        Description: "Description"
+        Start date: "Start date"
+        Finish date: "Finish date"
+        Status: "Status"
+        Team: "Team"
+    Title: "Title"
+    Description: "Description"
+    Start date: "Start date"
+    Finish date: "Finish date"
+    Status: "Status"
+    Team: "Team"
   users:
     create:
       success: "User was successfully created."
@@ -34,3 +89,60 @@ en:
       success: "User was successfully updated."
     destroy: 
       success: "User was successfully destroyed."
+    index:
+        New user: "New user"
+        Name: "Name"
+        Email: "Email"
+    Name: "Name"
+    Email: "Email"
+    Password: "Password"
+    Password Confirmation: "Password Confirmation"
+
+  
+  Divisions: "Divisions"
+  Employees: "Employees"
+  Targets: "Targets"
+  Teams: "Teams"
+  Users: "Users"
+
+  New Division: "New Division"
+  Show this division: "Show this division"
+  Back to divisions: "Back to divisions"
+  Edit this division: "Edit this division"
+  Editing division: "Editing division"
+  Destroy this division: "Destroy this division"
+
+  New Employee: "New Employee"
+  Show this employee: "Show this employee"
+  Back to employees: "Back to employees"
+  Edit this employee: "Edit this employee"
+  Editing employee: "Editing employee"
+  Destroy this employee: "Destroy this employee"
+
+  New Target: "New Target"
+  Show this target: "Show this target"
+  Back to targets: "Back to targets"
+  Edit this target: "Edit this target"
+  Editing target: "Editing target"
+  Destroy this target: "Destroy this target"
+
+  New Team: "New Team"
+  Show this team: "Show this team"
+  Back to teams: "Back to teams"
+  Edit this team: "Edit this team"
+  Editing team: "Editing team"
+  Destroy this team: "Destroy this team"
+  
+  New User: "New User"
+  Show this user: "Show this user"
+  Back to users: "Back to users"
+  Edit this user: "Edit this user"
+  Editing user: "Editing user"
+  Destroy this user: "Destroy this user"
+  
+  Edit: "Edit"
+  Delete: "Delete"
+  Show: "Show"
+
+  Menu: "Menu"
+  Home: "Home"

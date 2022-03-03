@@ -1,21 +1,21 @@
 <div id="<%= dom_id target %>">
   <p>
-    <strong>Title:</strong>
+    <strong><%= t 'targets.Title', default: 'not exist'%>:</strong>
     <%= target.title %>
   </p>
 
   <p>
-    <strong>Description:</strong>
+    <strong><%= t 'targets.Description', default: 'not exist'%>:</strong>
     <%= target.description %>
   </p>
 
   <p>
-    <strong>Start date:</strong>
+    <strong><%= t 'targets.Start date', default: 'not exist'%>:</strong>
     <%= target.start_date.strftime("%Y-%m-%d") %>
   </p>
 
   <p>
-    <strong>Finish date:</strong>
+    <strong><%= t 'targets.Finish date', default: 'not exist'%>:</strong>
     <%= target.finish_date.strftime("%Y-%m-%d") %>
   </p>
 
@@ -26,12 +26,12 @@
     <% end %>
 
   <p>
-    <strong>Team:</strong>
+    <strong><%= t 'targets.Team', default: 'not exist'%>:</strong>
     <%= team %>
   </p>
 
   <p>
-    <strong>Status:</strong>
+    <strong><%= t 'targets.Status', default: 'not exist'%>:</strong>
     <%= target.status %>
   </p>
 

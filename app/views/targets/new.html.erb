@@ -1,9 +1,9 @@
-<h1>New target</h1>
+<h1><%= t 'New Target', default: 'not exist'%></h1>
 
 <%= render "form", target: @target %>
 
 <br>
 
 <div>
-  <%= link_to "Back to targets", targets_path %>
+  <%= link_to t("Back to targets"), targets_path %>
 </div>
