@@ -23,19 +23,18 @@
   <base href="http://127.0.0.1:3000/" />
   <div class="w3-sidebar w3-light-grey w3-bar-block" style="width:15%">
     
-    <h3 class="w3-bar-item" >Menu</h3>
-    <a href="/home" class="w3-bar-item w3-button">Home</a>
-    <a href="/divisions" class="w3-bar-item w3-button">Divisions</a>
-    <a href="/employees" class="w3-bar-item w3-button">Employees</a>
-    <a href="/targets" class="w3-bar-item w3-button">Targets</a>
-    <a href="/teams" class="w3-bar-item w3-button">Teams</a>
-    <a href="/users" class="w3-bar-item w3-button">Users</a>
+    <h3 class="w3-bar-item" ><%= t 'Menu', default: 'not exist'%></h3>
+    <a href="/home" class="w3-bar-item w3-button"><%= t 'Home', default: 'not found'%></a>
+    <a href="/divisions" class="w3-bar-item w3-button"><%= t 'Divisions', default: 'not found'%></a>
+    <a href="/employees" class="w3-bar-item w3-button"><%= t 'Employees', default: 'not found'%></a>
+    <a href="/targets" class="w3-bar-item w3-button"><%= t 'Targets', default: 'not found'%></a>
+    <a href="/teams" class="w3-bar-item w3-button"><%= t 'Teams', default: 'not found'%></a>
+    <a href="/users" class="w3-bar-item w3-button"><%= t 'Users', default: 'not found'%></a>
     <% if user_signed_in?%>
-    <a href="/users/<%=current_user.id%>" class="w3-bar-item w3-button">Profile</a>
+    <a href="/users/<%=current_user.id%>" class="w3-bar-item w3-button"><%= t 'Profile', default: 'not found'%></a>
     <%else%>
-    <a href="/users" class="w3-bar-item w3-button">Profile</a>
+    <a href="/users" class="w3-bar-item w3-button"><%= t 'Profile', default: 'not found'%></a>
     <%end%>
-
   </div>
   <div class="main" style="margin-left:15%">
     <%= yield %>
