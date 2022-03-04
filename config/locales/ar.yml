@@ -220,6 +220,10 @@ ar:
     sessions:
       new:
         Log in: "تسجيل دخول"
+    passwords:
+      new:
+        Forgot your password?: "نسيت كلمة المرور؟"
+        Send me reset password instructions: "ارسل تعليمات إعادة تسجيل كلمة المرور"
 
 
 

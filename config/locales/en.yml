@@ -179,3 +179,7 @@ en:
     sessions:
       new:
         Log in: "Log in"
+    passwords:
+      new:
+        Forgot your password?: "Forgot your password?"
+        Send me reset password instructions: "Send me reset password instructions"
