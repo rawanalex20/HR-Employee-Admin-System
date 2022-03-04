@@ -1,12 +1,12 @@
 <%= form_with(model: user) do |form| %>
   <% if user.errors.any? %>
     <div style="color: red">
-      <% if division.errors.count == 1%>
+      <% if user.errors.count == 1%>
       <% t = 'globals.forms.messages.errors.one error'%>
       <% else%>
       <% t = 'globals.forms.messages.errors.multiple errors'%>
       <% end%>
-      <h2><%= t t, count: division.errors.count, default: 'not exist'%></h2>
+      <h2><%= t t, count: user.errors.count, default: 'not exist'%></h2>
 
       <ul>
         <% user.errors.each do |error| %>

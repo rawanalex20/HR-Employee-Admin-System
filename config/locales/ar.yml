@@ -184,3 +184,10 @@ ar:
   Menu: "القائمة"
   Home: "الرئيسية"
 
+  user_mailer:
+      new_user_email:
+        subject: "مرحبا %{user}"
+        Welcome: "مرحبا"
+        Name: "الاسم"
+        Email: "البريد"
+        User details: "بيانات المستخدم"

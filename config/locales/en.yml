@@ -146,3 +146,11 @@ en:
 
   Menu: "Menu"
   Home: "Home"
+
+  user_mailer:
+      new_user_email:
+        subject: "Welcome %{user}"
+        Welcome: "Welcome"
+        Name: "Name"
+        Email: "Email"
+        User details: "User details"

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <p><%= t '.Welcome', default: 'not found'%>, <%= @user.name %>!</p>
+    <p>
+    <%= t '.User details', default: 'not found'%><br>
+    --------------------------
+    </p>
+    <p><%= t '.Name', default: 'not found'%>: <%= @user.name %></p>
+    <p><%= t '.Email', default: 'not found'%>: <%= @user.email %></p>
+    <p>
+  </body>
+</html>
