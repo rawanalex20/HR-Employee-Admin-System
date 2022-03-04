@@ -1,11 +1,11 @@
 ar:
   activerecord:
     models:
-        division: "القسم"
-        user: "المستخدم"
-        team: "الفريق"
-        employee: "الموظف"
-        target: "الهدف"
+      division: "القسم"
+      user: "المستخدم"
+      team: "الفريق"
+      employee: "الموظف"
+      target: "الهدف"
     attributes:
       team:
         name: "اسم الفريق"
@@ -32,6 +32,7 @@ ar:
         email: "البريد الاكتروني"
         password: "كلمة السر"
         password_confirmation: "تأكيد كلمة السر"
+        remember_me: "تذكر الحساب"
 
   globals:
     forms:
@@ -70,13 +71,13 @@ ar:
     destroy: 
       success: ".حذف بنجاح"
     index:
-        New employee: "موظف جديد"
-        Name: "الاسم"
-        Email: "البريد الاكتروني"
-        Job: "الوظيفة"
-        Salary: "الراتب"
-        Employment status: "الحالة الوظيفية"
-        Team: "الفريق"
+      New employee: "موظف جديد"
+      Name: "الاسم"
+      Email: "البريد الاكتروني"
+      Job: "الوظيفة"
+      Salary: "الراتب"
+      Employment status: "الحالة الوظيفية"
+      Team: "الفريق"
     Name: "الاسم"
     Email: "البريد الاكتروني"
     Job: "الوظيفة"
@@ -91,11 +92,11 @@ ar:
     destroy: 
       success: ".حذف بنجاح"
     index:
-        New team: "فريق جديد"
-        Name: "اسم الفريق"
-        Description: "الوصف"
-        Team lead: "قائد الفريق"
-        Members: "أعضاء الفريق"
+      New team: "فريق جديد"
+      Name: "اسم الفريق"
+      Description: "الوصف"
+      Team lead: "قائد الفريق"
+      Members: "أعضاء الفريق"
     Name: "اسم الفريق"
     Description: "الوصف"
     Team lead: "قائد الفريق"
@@ -108,13 +109,13 @@ ar:
     destroy: 
       success: ".حذف بنجاح"
     index:
-        New target: "هدف جديد"
-        Title: "الهدف"
-        Description: "الوصف"
-        Start date: "تاريخ البداية"
-        Finish date: "تاريخ النهاية"
-        Status: "الحالة"
-        Team: "الفريق"
+      New target: "هدف جديد"
+      Title: "الهدف"
+      Description: "الوصف"
+      Start date: "تاريخ البداية"
+      Finish date: "تاريخ النهاية"
+      Status: "الحالة"
+      Team: "الفريق"
     Title: "الهدف"
     Description: "الوصف"
     Start date: "تاريخ البداية"
@@ -129,15 +130,15 @@ ar:
     destroy: 
       success: ".حذف بنجاح"
     index:
-        New user: "مستخدم جديد"
-        Name: "الاسم"
-        Email: "البريد الالكتروني"
+      New user: "مستخدم جديد"
+      Name: "الاسم"
+      Email: "البريد الالكتروني"
     Name: "الاسم"
     Email: "البريد الالكتروني"
     Password: "كلمة المرور"
     Password Confirmation: "تأكيد كلمة المرور"
     form:
-        Confirmation: "تأكيد كلمة المرور"
+      Confirmation: "تأكيد كلمة المرور"
 
   Divisions: "الأقسام"
   Employees: "الموظفون"
@@ -188,20 +189,37 @@ ar:
   Home: "الرئيسية"
 
   user_mailer:
-      new_user_email:
-        subject: "مرحبا %{user}"
-        Welcome: "مرحبا"
-        Name: "الاسم"
-        Email: "البريد"
-        User details: "بيانات المستخدم"
+    new_user_email:
+      subject: "مرحبا %{user}"
+      Welcome: "مرحبا"
+      Name: "الاسم"
+      Email: "البريد"
+      User details: "بيانات المستخدم"
 
   home:
     index:
       HR Admin System: "إدارة الموارد البشرية"
-      Sign up: "سجل حساب"
+      Sign up: "سجل حساب جديد"
       Sign in: "تسجيل دخول"
   
   layouts:
     application:
-        HREmployeeAdminSystem: "إدارة الموارد البشرية"
-        Sign out: "خروج"
+      HREmployeeAdminSystem: "إدارة الموارد البشرية"
+      Sign out: "خروج"
+
+  devise:
+    registrations:
+      new:
+        Sign up: "حساب جديد"
+        characters minimum: "رموز أقل عدد"
+    shared:
+      links:
+        Log in: "تسجيل دخول"
+        Sign up: "حساب جديد"
+        Forgot your password?: "نسيت كلمة المرور؟"
+    sessions:
+      new:
+        Log in: "تسجيل دخول"
+
+
+
