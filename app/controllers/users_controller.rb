@@ -60,6 +60,17 @@ class UsersController < ApplicationController
     end
   end
 
+   # DELETE /users/1/delete_profile or /users/1.json/delete_profile
+   def delete_profile
+    image = User.find(params[:id])
+    image.profile.purge
+
+    respond_to do |format|
+      format.html {redirect_to request.referrer, notice: "Profile was successfully deleted." }
+      format.json { head :no_content }
+    end
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_user
@@ -68,6 +79,6 @@ class UsersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def user_params
-      params.require(:user).permit(:email, :name, :password, :password_confirmation)
+      params.require(:user).permit(:email, :name, :password, :password_confirmation, :profile)
     end
 end
