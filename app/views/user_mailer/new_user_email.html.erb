@@ -4,13 +4,13 @@
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
   </head>
   <body>
-    <p>Welcome, <%= @user.name %>!</p>
+    <p><%= t '.Welcome', default: 'not found'%>, <%= @user.name %>!</p>
     <p>
-    User details<br>
+    <%= t '.User details', default: 'not found'%><br>
     --------------------------
     </p>
-    <p>Name: <%= @user.name %></p>
-    <p>Email: <%= @user.email %></p>
+    <p><%= t '.Name', default: 'not found'%>: <%= @user.name %></p>
+    <p><%= t '.Email', default: 'not found'%>: <%= @user.email %></p>
     <p>
   </body>
 </html>
