@@ -93,6 +93,8 @@ en:
         New user: "New user"
         Name: "Name"
         Email: "Email"
+    delete_profile:
+      success: "Profile was successfully deleted"
     Name: "Name"
     Email: "Email"
     Password: "Password"

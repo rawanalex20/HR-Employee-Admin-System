@@ -33,6 +33,7 @@ ar:
         password: "كلمة السر"
         password_confirmation: "تأكيد كلمة السر"
         remember_me: "تذكر الحساب"
+        profile: "صورة شخصية"
 
   globals:
     forms:
@@ -133,12 +134,17 @@ ar:
       New user: "مستخدم جديد"
       Name: "الاسم"
       Email: "البريد الالكتروني"
+    delete_profile:
+      success: "حذفت الصورة بنجاح"
     Name: "الاسم"
     Email: "البريد الالكتروني"
     Password: "كلمة المرور"
     Password Confirmation: "تأكيد كلمة المرور"
     form:
       Confirmation: "تأكيد كلمة المرور"
+      Browse: "رفع"
+    user:
+      Delete profile: "إلغاء الصورة الشخصية"
 
   Divisions: "الأقسام"
   Employees: "الموظفون"

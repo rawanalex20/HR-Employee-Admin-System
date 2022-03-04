@@ -66,7 +66,7 @@ class UsersController < ApplicationController
     image.profile.purge
 
     respond_to do |format|
-      format.html {redirect_to request.referrer, notice: "Profile was successfully deleted." }
+      format.html {redirect_to request.referrer, notice: t('.success') }
       format.json { head :no_content }
     end
   end
