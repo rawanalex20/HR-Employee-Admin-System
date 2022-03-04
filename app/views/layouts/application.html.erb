@@ -11,6 +11,15 @@
   </head>
 
   <body>
+  <div class="sign_out">
+  <%if user_signed_in?%>
+  <%= button_to 'Sign out', destroy_user_session_path, method: :delete%>
+  <%end%>
+  </div>
+
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+
   <base href="http://127.0.0.1:3000/" />
   <div class="w3-sidebar w3-light-grey w3-bar-block" style="width:15%">
     
