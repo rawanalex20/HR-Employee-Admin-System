@@ -63,3 +63,65 @@ en:
       not_saved:
         one: "1 error prohibited this %{resource} from being saved:"
         other: "%{count} errors prohibited this %{resource} from being saved:"
+
+ar:
+  devise:
+    confirmations:
+      confirmed: "تم تأكيد البريد الالكتروني."
+      send_instructions: "سوف يتم إرسال إيميل بالتعليمات اللزمة لتأكيد البريد الاكتروني في خلال دقائق."
+      send_paranoid_instructions: "إذا وجد بريدك الالكتروني في قاعدة البيانات سيتم إرسال إيميل بالتعليمات اللزمة لتأكيد البريد الاكتروني في خلال دقائق."
+    failure:
+      already_authenticated: "انت مسجل بالفعل."
+      inactive: "الحساب لم يتم تفعيله بعد."
+      invalid: " %{authentication_keys} غير صالح أو كلمة مرور."
+      locked: "الحساب مغلق."
+      last_attempt: "لديك محاولة أخرى واحدة فقط قبل غلق الحساب."
+      not_found_in_database: "%{authentication_keys} غير صالح أو كلمة مرور."
+      timeout: "الدخول قد انتهى صلاحيته. يرجى الدخول مجددا."
+      unauthenticated: "يجب الدخول أو تسجيل الحساب للاستمرار."
+      unconfirmed: "يجب تأكيد بريدك الالكتروني قبل الاستمرار."
+    mailer:
+      confirmation_instructions:
+        subject: "تعليمات للتأكيد"
+      reset_password_instructions:
+        subject: "تعليمات لإعادة تسجيل كلمة المرور"
+      unlock_instructions:
+        subject: "تعليمات إعادة الفتح"
+      email_changed:
+        subject: "تم تغيير البريد الالكتروني"
+      password_change:
+        subject: "تم تغيير كلمة المرور"
+    omniauth_callbacks:
+      failure: "لا يمكن توثيقك من %{kind} بسبب \"%{reason}\"."
+      success: "تم التوثيق من حساب %{kind}."
+    passwords:
+      no_token: "لا يوجد صلاحية لتلك الصفحة من غير إيميل إعادة تسجيل كلمة المرور. إذا لم تصل من إيميل تسجيل كلمة المرور فيرجى التأكد من استخدام الرابط الصحيح كاملا."
+      send_instructions: "سيصلك إيميل بكيفية إعادة تسجيل كلمة المرور."
+      send_paranoid_instructions: "إذا وجد بريدك الالكتروني في قاعدة البيانات سيتم إرسال رابط استرداد كلمة المرور على بريدك الاكتروني في خلال دقائق."
+      updated: "تم تغيير كلمة المرور. انت الآن مسجل."
+      updated_not_active: "تم تغيير كلمة المرور."
+    registrations:
+      destroyed: "إلى اللقاء! تم إلغاء حسابك. نرجو رؤيتك مجددا."
+      signed_up: "مرحبا! تم تسجيلك بنجاح"
+      signed_up_but_inactive: "تم تسجيلك بنجاح. و لكن لم نتكمن من دخولك لأنه لم يتم تفعيل حسابك بعد."
+      signed_up_but_locked: "تم تسجيلك بنجاح. و لكم لم نتمكن من دخلوك لأن الحساب مغلق."
+      signed_up_but_unconfirmed: " تم إرسال رسالة برابط تأكيد على بريدك. يرجى الدخول عبر الرابط لتفعيل حسابك."
+      update_needs_confirmation: "تم تعديل حسابك بنجاح,و لكن يجب تأكيد البريد الالكتروني الجديد. يرجعى التحقق من البريد و فتح رابط التأكيد لتأكيد الإيميل الجديد."
+      updated: "تم تعديل الحساب."
+      updated_but_not_signed_in: "تم تعديل الحساب, و لكن بسبب تغيير كلمة المرور, يجب الدخول مجددا."
+    sessions:
+      signed_in: "تم الدخول بنجاح."
+      signed_out: "تم الخروج بنجاح."
+      already_signed_out: "تم الخروج بالفعل."
+    unlocks:
+      send_instructions: "سيتم إرسال إيميل بتعليمات عن كيفية فتح الحساب في خلال دقائق."
+      send_paranoid_instructions: "إذا كان حسابك موجود, سيتم إرسال إيميل بتعليمات عن كيفية فتح الحساب في خلال دقائق."
+      unlocked: "تم إعادة فتح الحساب بنجاح. يرجى الدخول للاستمرار."
+  errors:
+    messages:
+      already_confirmed: "تم التأكيد بالفعل, يرجى محاولة الدخول"
+      confirmation_period_expired: "يجب التأكيد في خلال %{period}, يرجى الطلب مجددا"
+      expired: "منتهى, يرجى الطلب مجددا"
+      not_found: "غير موجود"
+      not_locked: "ليس مغلق"
+      not_saved: " أخطاء منعت %{resource} من التسجيل %{count} :"
