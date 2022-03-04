@@ -30,6 +30,12 @@
     <a href="/targets" class="w3-bar-item w3-button">Targets</a>
     <a href="/teams" class="w3-bar-item w3-button">Teams</a>
     <a href="/users" class="w3-bar-item w3-button">Users</a>
+    <% if user_signed_in?%>
+    <a href="/users/<%=current_user.id%>" class="w3-bar-item w3-button">Profile</a>
+    <%else%>
+    <a href="/users" class="w3-bar-item w3-button">Profile</a>
+    <%end%>
+
   </div>
   <div class="main" style="margin-left:15%">
     <%= yield %>
