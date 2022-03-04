@@ -31,6 +31,7 @@ ar:
         name: "الاسم"
         email: "البريد الاكتروني"
         password: "كلمة السر"
+        password_confirmation: "تأكيد كلمة السر"
 
   globals:
     forms:
@@ -135,6 +136,8 @@ ar:
     Email: "البريد الالكتروني"
     Password: "كلمة المرور"
     Password Confirmation: "تأكيد كلمة المرور"
+    form:
+        Confirmation: "تأكيد كلمة المرور"
 
   Divisions: "الأقسام"
   Employees: "الموظفون"
@@ -191,3 +194,14 @@ ar:
         Name: "الاسم"
         Email: "البريد"
         User details: "بيانات المستخدم"
+
+  home:
+    index:
+      HR Admin System: "إدارة الموارد البشرية"
+      Sign up: "سجل حساب"
+      Sign in: "تسجيل دخول"
+  
+  layouts:
+    application:
+        HREmployeeAdminSystem: "إدارة الموارد البشرية"
+        Sign out: "خروج"

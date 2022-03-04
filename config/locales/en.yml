@@ -154,3 +154,14 @@ en:
         Name: "Name"
         Email: "Email"
         User details: "User details"
+
+  home:
+    index:
+      HR Admin System: "HR Admin System"
+      Sign up: "Sign up"
+      Sign in: "Sign in"
+  
+  layouts:
+    application:
+        HREmployeeAdminSystem: "HR Employee Admin System"
+        Sign out: "Sign out"

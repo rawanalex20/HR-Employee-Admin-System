@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>HREmployeeAdminSystem</title>
+    <title><%= t '.HREmployeeAdminSystem', default: 'not exist'%></title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <%= csrf_meta_tags %>
@@ -13,7 +13,7 @@
   <body>
   <div class="sign_out">
   <%if user_signed_in?%>
-  <%= button_to 'Sign out', destroy_user_session_path, method: :delete%>
+  <%= button_to t('.Sign out'), destroy_user_session_path, method: :delete%>
   <%end%>
   </div>
 
