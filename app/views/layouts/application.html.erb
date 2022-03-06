@@ -12,6 +12,15 @@
 
   <body>
   <div class="sign_out">
+  <% locale = I18n.locale%>
+  <% if locale == :en%>
+    <% locale = :ar%>
+  <% else%>
+    <% locale = :en%>
+  <% end%>
+  <% current_uri = request.env['PATH_INFO']%>
+  
+  <%= link_to t(".lang"), switch_url(locale: locale, path: current_uri) %>
   <%if user_signed_in?%>
   <%= button_to t('.Sign out'), destroy_user_session_path, method: :delete%>
   <%end%>

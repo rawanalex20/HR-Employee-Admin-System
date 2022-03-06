@@ -213,6 +213,7 @@ ar:
     application:
       HREmployeeAdminSystem: "إدارة الموارد البشرية"
       Sign out: "خروج"
+      lang: "العريبة"
 
   devise:
     registrations:
