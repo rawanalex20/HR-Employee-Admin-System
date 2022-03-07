@@ -2,17 +2,15 @@
 
 <h1>Divisions</h1>
 
-<%= link_to "New division", new_division_path %>
+<div class="new-record"><%= button_to "Add Division", new_division_path, method: :get %></div>
 
 <div id="divisions">
 <table>
   <tr>
     <th>Name</th>
     <th>Description</th>
-    <th>Manager</th>
     <th>Teams</th>
-    <th></th>
-    <th></th>
+    <th>Manager</th>
     <th></th>
   </tr>
 
@@ -25,7 +23,6 @@
     <% end %>
     <td><%= division.name %></td>
     <td><%= division.description %></td>
-    <td><%= manager %></td>
     <td>
     <% teams = [] %>
     <% division.teams.each do |team| %>
@@ -34,9 +31,11 @@
       </div>
     <% end%>
     </td>
-    <td><%= link_to "Show", division %></td>
-    <td><%= link_to "Edit", edit_division_path(division) %></td>
-    <td><%= button_to "Delete", division, method: :delete %></td>
+    <td><%= manager %></td>
+    <td>
+      <div class="tb-btns"><%= button_to "Show", division, method: :get %></div>
+      <div class="tb-btns"><%= button_to "Edit", edit_division_path(division), method: :get %></div>
+      <div class="tb-btns"><%= button_to "Delete", division, method: :delete %></div>
     </tr>
     
   <% end %>

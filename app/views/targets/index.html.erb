@@ -2,19 +2,17 @@
 
 <h1>Targets</h1>
 
-<%= link_to "New target", new_target_path %>
+<div class="new-record"><%= button_to "Add Target", new_target_path, method: :get %></div>
 
 <div id="targets">
 <table>
   <tr>
     <th>Title</th>
     <th>Description</th>
+    <th>Team</th>
     <th>Start date</th>
     <th>Finish date</th>
-    <th>Team</th>
     <th>Status</th>
-    <th></th>
-    <th></th>
     <th></th>
   </tr>
 
@@ -27,13 +25,15 @@
     <% end %>
     <td><%= target.title %></td>
     <td><%= target.description %></td>
+    <td><%= team %></td>
     <td><%= target.start_date.strftime("%Y-%m-%d") %></td>
     <td><%= target.finish_date.strftime("%Y-%m-%d") %></td>
-    <td><%= team %></td>
     <td><%= target.status %></td>
-    <td><%= link_to "Show", target %></td>
-    <td><%= link_to "Edit", edit_target_path(target) %></td>
-    <td><%= button_to "Delete", target, method: :delete %></td>
+    <td>
+      <div class="tb-btns"><%= button_to "Show", target, method: :get %></div> 
+      <div class="tb-btns"><%= button_to "Edit", edit_target_path(target), method: :get %></div>
+      <div class="tb-btns"><%= button_to "Delete", target, method: :delete %></div>
+    </td>
     </tr>
     
   <% end %>
