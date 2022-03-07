@@ -17,8 +17,10 @@
 
   
   <div class="container">
-    <div class="main">  
-      <p class="alert"><%= alert %></p>
+    <div class="main">
+      <% unless request.env['PATH_INFO'] == "/users/sign_in"%>  
+        <p class="alert"><%= alert %></p>
+      <% end%>
       <%= yield %>
     </div>
     <%= render "layouts/footer" %>
