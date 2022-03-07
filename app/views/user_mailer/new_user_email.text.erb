@@ -1,7 +1,7 @@
-  Welcome, <%= @user.name %>!
+<%= t '.Welcome', default: 'not found'%>, <%= @user.name %>!
 
-  User details
+<%= t '.User details', default: 'not found'%>
   --------------------------
   
-  Name: <%= @user.name %>
-  Email: <%= @user.email %>
+  <%= t '.Name', default: 'not found'%>: <%= @user.name %>
+  <%= t '.Email', default: 'not found'%>: <%= @user.email %>

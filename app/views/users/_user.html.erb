@@ -1,19 +1,18 @@
 <div id="<%= dom_id user %>">
   <p>
-    <strong>Profile:</strong>
     <%if user.profile.attached?%>
       <%= image_tag(user.profile, size: "200x200") %>
-      <%= button_to "Delete profile", delete_profile_user_path(user), method: :delete %>
+      <%= button_to t(".Delete profile"), delete_profile_user_path(user), method: :delete %>
     <%end%>
   </p>
 
   <p>
-    <strong>Email:</strong>
+    <strong><%= t 'users.Email', default: 'not exist'%>:</strong>
     <%= user.email %>
   </p>
 
   <p>
-    <strong>Name:</strong>
+    <strong><%= t 'users.Name', default: 'not exist'%>:</strong>
     <%= user.name %>
   </p>
 

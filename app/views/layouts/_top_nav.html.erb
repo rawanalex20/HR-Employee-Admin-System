@@ -1,10 +1,20 @@
 <div class="topnav">
-    <h2 class="title">HR Admin System</h2>
+    <h2 class="title"><%= t 'HR Admin System', default: 'not found' %></h2>
+    <% locale = I18n.locale%>
+    <% if locale == :en%>
+      <% locale = :ar%>
+    <% else%>
+      <% locale = :en%>
+    <% end%>
+    <% current_uri = request.env['PATH_INFO']%>
     <a class="sign-out">
         <%if user_signed_in?%>
-            <%= button_to 'Logout', destroy_user_session_path, method: :delete%>
+        <%= button_to t('.Sign out'), destroy_user_session_path, method: :delete%>
         <%end%>
     </a>
+    <div class="lang">
+      <%= link_to t(".lang"), switch_url(locale: locale, path: current_uri) %>
+    </div>
     <div class="profile">
     <% if user_signed_in?%>
         <a href="/users/<%=current_user.id%>"><%=current_user.name%></a>

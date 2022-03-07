@@ -1,0 +1,234 @@
+ar:
+  activerecord:
+    models:
+      division: "القسم"
+      user: "المستخدم"
+      team: "الفريق"
+      employee: "الموظف"
+      target: "الهدف"
+    attributes:
+      team:
+        name: "اسم الفريق"
+        description: "الوصف"
+      division:
+        name: "القسم"
+        description: "الوصف"
+        teams: "الفرق"
+        manager_id: "المدير"
+      employee:
+        name: "الاسم"
+        email: "البريد الاكتروني"
+        job: "الوظيفة"
+        salary: "الراتب"
+        employment_status: "الحالة الوظيفية"
+      target:
+        title: "الهدف"
+        description: "الوصف"
+        start_date: "تاريخ البداية"
+        finish_date: "تاريخ النهاية"
+        status: "الحالة"
+      user:
+        name: "الاسم"
+        email: "البريد الاكتروني"
+        password: "كلمة السر"
+        password_confirmation: "تأكيد كلمة السر"
+        remember_me: "تذكر الحساب"
+        profile: "صورة شخصية"
+
+  globals:
+    forms:
+      messages:
+        errors:
+          one error: "يوجد هنا خطأ"
+          multiple errors: "يوجد هنا أخطاء %{count}"
+
+  helpers:
+    submit:
+      create: "إنشاء %{model}"
+      update: "تعديل %{model}"
+  
+  divisions:
+    create:
+      success: ".أنشئ بنجاح"
+    update: 
+      success: ".تم بنجاح"
+    destroy: 
+      success: ".حذف بنجاح"
+    index:
+      New division: "قسم جديد"
+      Name: "اسم الفريق"
+      Description: "الوصف"
+      Manager: "المدير"
+      Teams: "الفرق"
+    Name: "اسم الفريق"
+    Description: "الوصف"
+    Manager: "المدير"
+    Teams: "الفرق"
+  employees:
+    create:
+      success: ".أنشئ بنجاح"
+    update: 
+      success: ".تم بنجاح"
+    destroy: 
+      success: ".حذف بنجاح"
+    index:
+      New employee: "موظف جديد"
+      Name: "الاسم"
+      Email: "البريد الاكتروني"
+      Job: "الوظيفة"
+      Salary: "الراتب"
+      Employment status: "الحالة الوظيفية"
+      Team: "الفريق"
+    Name: "الاسم"
+    Email: "البريد الاكتروني"
+    Job: "الوظيفة"
+    Salary: "الراتب"
+    Employment: "الحالة الوظيفية"
+    Team: "الفريق"
+  teams:
+    create:
+      success: ".أنشئ بنجاح"
+    update: 
+      success: ".تم بنجاح"
+    destroy: 
+      success: ".حذف بنجاح"
+    index:
+      New team: "فريق جديد"
+      Name: "اسم الفريق"
+      Description: "الوصف"
+      Team lead: "قائد الفريق"
+      Members: "أعضاء الفريق"
+    Name: "اسم الفريق"
+    Description: "الوصف"
+    Team lead: "قائد الفريق"
+    Members: "أعضاء الفريق"
+  targets:
+    create:
+      success: ".أنشئ بنجاح"
+    update: 
+      success: ".تم بنجاح"
+    destroy: 
+      success: ".حذف بنجاح"
+    index:
+      New target: "هدف جديد"
+      Title: "الهدف"
+      Description: "الوصف"
+      Start date: "تاريخ البداية"
+      Finish date: "تاريخ النهاية"
+      Status: "الحالة"
+      Team: "الفريق"
+    Title: "الهدف"
+    Description: "الوصف"
+    Start date: "تاريخ البداية"
+    Finish date: "تاريخ النهاية"
+    Status: "الحالة"
+    Team: "الفريق"
+  users:
+    create:
+      success: ".أنشئ بنجاح"
+    update: 
+      success: ".تم بنجاح"
+    destroy: 
+      success: ".حذف بنجاح"
+    index:
+      New user: "مستخدم جديد"
+      Name: "الاسم"
+      Email: "البريد الالكتروني"
+      Sign in count: "عدد مرات الدخول"
+      Current sign in: "وقت التسجيل الحالي"
+      Last sign in: "آخر وقت للتسجيل"
+    delete_profile:
+      success: "حذفت الصورة بنجاح"
+    Name: "الاسم"
+    Email: "البريد الالكتروني"
+    Password: "كلمة المرور"
+    Password Confirmation: "تأكيد كلمة المرور"
+    form:
+      Confirmation: "تأكيد كلمة المرور"
+      Browse: "رفع"
+    user:
+      Delete profile: "إلغاء الصورة الشخصية"
+
+  Divisions: "الأقسام"
+  Employees: "الموظفون"
+  Targets: "الأهداف"
+  Teams: "الفرق"
+  Users: "المستخدمون"
+  Profile: "الملف الشخصي"
+
+  New Division: "قسم جديد"
+  Show this division: "عرض القسم"
+  Back to divisions: "عودة"
+  Edit this division: "تعديل"
+  Editing division: "تعديل"
+  Destroy this division: "حذف"
+
+  New Employee: "موظف جديد"
+  Show this employee: "عرض الموظف"
+  Back to employees: "عودة"
+  Edit this employee: "تعديل"
+  Editing employee: "تعديل"
+  Destroy this employee: "حذف"
+
+  New Target: "هدف جديد"
+  Show this target: "عرض الهدف"
+  Back to targets: "عودة"
+  Edit this target: "تعديل"
+  Editing target: "تعديل"
+  Destroy this target: "حذف"
+
+  New Team: "فريق جديد"
+  Show this team: "عرض الفريق"
+  Back to teams: "عودة"
+  Edit this team: "تعديل"
+  Editing team: "تعديل"
+  Destroy this team: "حذف"
+  
+  New User: "مستخدم جديد"
+  Show this user: "عرض المستخدم"
+  Back to users: "عودة"
+  Edit this user: "تعديل"
+  Editing user: "تعديل"
+  Destroy this user: "حذف"
+  
+  Edit: "تعديل"
+  Delete: "حذف"
+  Show: "عرض"
+
+  HR Admin System: "إدارة الموارد البشرية"
+
+  user_mailer:
+    new_user_email:
+      subject: "مرحبا %{user}"
+      Welcome: "مرحبا"
+      Name: "الاسم"
+      Email: "البريد"
+      User details: "بيانات المستخدم"
+
+  layouts:
+    application:
+      HREmployeeAdminSystem: "إدارة الموارد البشرية"
+      Sign out: "خروج"
+    top_nav:
+      lang: "العريبة"
+
+  devise:
+    registrations:
+      new:
+        Sign up: "حساب جديد"
+        characters minimum: "رموز أقل عدد"
+    shared:
+      links:
+        Log in: "تسجيل دخول"
+        Sign up: "حساب جديد"
+        Forgot your password?: "نسيت كلمة المرور؟"
+    sessions:
+      new:
+        Log in: "تسجيل دخول"
+    passwords:
+      new:
+        Forgot your password?: "نسيت كلمة المرور؟"
+        Send me reset password instructions: "ارسل تعليمات إعادة تسجيل كلمة المرور"
+
+
+

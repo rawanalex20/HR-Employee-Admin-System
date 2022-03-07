@@ -1,18 +1,18 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Targets</h1>
+<h1><%= t 'Targets', default: 'not exist'%></h1>
 
-<div class="new-record"><%= button_to "Add Target", new_target_path, method: :get %></div>
+<div class="new-record"><%= button_to t(".New target"), new_target_path, method: :get %></div>
 
 <div id="targets">
 <table>
   <tr>
-    <th>Title</th>
-    <th>Description</th>
-    <th>Team</th>
-    <th>Start date</th>
-    <th>Finish date</th>
-    <th>Status</th>
+    <th><%= t '.Title', default: 'not found'%></th>
+    <th><%= t '.Description', default: 'not found'%></th>
+    <th><%= t '.Team', default: 'not found'%></th>
+    <th><%= t '.Start date', default: 'not found'%></th>
+    <th><%= t '.Finish date', default: 'not found'%></th>
+    <th><%= t '.Status', default: 'not found'%></th>
     <th></th>
   </tr>
 
@@ -30,13 +30,12 @@
     <td><%= target.finish_date.strftime("%Y-%m-%d") %></td>
     <td><%= target.status %></td>
     <td>
-      <div class="tb-btns"><%= button_to "Show", target, method: :get %></div> 
-      <div class="tb-btns"><%= button_to "Edit", edit_target_path(target), method: :get %></div>
-      <div class="tb-btns"><%= button_to "Delete", target, method: :delete %></div>
+      <div class="tb-btns"><%= button_to t("Show"), target, method: :get %></div> 
+      <div class="tb-btns"><%= button_to t("Edit"), edit_target_path(target), method: :get %></div>
+      <div class="tb-btns"><%= button_to t("Delete"), target, method: :delete %></div>
     </td>
     </tr>
     
   <% end %>
 </table>
 </div>
-

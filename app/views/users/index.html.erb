@@ -1,15 +1,15 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Users</h1>
+<h1<%= t 'Users', default: 'not exist'%>></h1>
 
 <div id="users">
 <table>
 <tr>
-  <th>Name</th>
-  <th>Email</th>
-  <th>Sign in count</th>
-  <th>Current sign in</th>
-  <th>Last sign in</th>
+  <th><%= t'.Name', default: 'not found'%></th>
+  <th><%= t '.Email', default: 'not found'%></th>
+  <th><%= t '.Sign in count', default: 'not found'%></th>
+  <th><%= t '.Current sign in', default: 'not found'%></th>
+  <th><%= t '.Last sign in', default: 'not found'%></th>
   <th></th>
 </tr>
 
@@ -33,13 +33,12 @@
   <%end%>
   </td>
   <td>
-    <div class="tb-btns"><%= button_to "Show", user, method: :get %></div>
-    <div class="tb-btns"><%= button_to "Edit", edit_user_path(user), method: :get %></div>
-    <div class="tb-btns"><%= button_to "Delete", user, method: :delete %></div>
+    <div class="tb-btns"><%= button_to t("Show"), user, method: :get %></div>
+    <div class="tb-btns"><%= button_to t("Edit"), edit_user_path(user), method: :get %></div>
+    <div class="tb-btns"><%= button_to t("Delete"), user, method: :delete %></div>
   </td>
   </tr>
   
 <% end %>
 </table>
 </div>
-

@@ -1,18 +1,18 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Employees</h1>
+<h1><%= t 'Employees', default: 'not exist'%></h1>
 
-<div class="new-record"><%= button_to "Add Employee", new_employee_path, method: :get %></div>
+<div class="new-record"><%= button_to t(".New employee"), new_employee_path, method: :get %></div>
 
 <div id="employees">
 <table>
 <tr>
-  <th>Name</th>
-  <th>Email</th>
-  <th>Job</th>
-  <th>Salary</th>
-  <th>Team</th>
-  <th>Employment</th>
+  <th><%= t '.Name', default: 'not found'%></th>
+  <th><%= t '.Email', default: 'not found'%></th>
+  <th><%= t '.Job', default: 'not found'%></th>
+  <th><%= t '.Salary', default: 'not found'%></th>
+  <th><%= t '.Team', default: 'not found'%></th>
+  <th><%= t '.Employment', default: 'not found'%></th>
   <th></th>
 </tr>
 
@@ -30,13 +30,12 @@
   <td><%= team %></td>
   <td><%= employee.employment_status %></td>
   <td>
-    <div class="tb-btns"><%= button_to "Show", employee, method: :get %></div>
-    <div class="tb-btns"><%= button_to "Edit", edit_employee_path(employee), method: :get %></div>
-    <div class="tb-btns"><%= button_to "Delete", employee, method: :delete %></div>
+    <div class="tb-btns"><%= button_to t("Show"), employee, method: :get %></div>
+    <div class="tb-btns"><%= button_to t("Edit"), edit_employee_path(employee), method: :get %></div>
+    <div class="tb-btns"><%= button_to t("Delete"), employee, method: :delete %></div>
   </td>
   </tr>
   
 <% end %>
 </table>
 </div>
-

@@ -36,7 +36,7 @@ class DivisionsController < ApplicationController
           team.division = @division
           team.save
         end
-        format.html { redirect_to division_url(@division), notice: "Division was successfully created." }
+        format.html { redirect_to division_url(@division), notice: t('.success') }
         format.json { render :show, status: :created, location: @division }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -65,7 +65,7 @@ class DivisionsController < ApplicationController
           team.division = @division
           team.save
         end
-        format.html { redirect_to division_url(@division), notice: "Division was successfully updated." }
+        format.html { redirect_to division_url(@division), notice: t('.success') }
         format.json { render :show, status: :ok, location: @division }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -79,7 +79,7 @@ class DivisionsController < ApplicationController
     @division.destroy
 
     respond_to do |format|
-      format.html { redirect_to divisions_url, notice: "Division was successfully destroyed." }
+      format.html { redirect_to divisions_url, notice: t('.success') }
       format.json { head :no_content }
     end
   end

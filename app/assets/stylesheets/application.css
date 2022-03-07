@@ -47,6 +47,12 @@
     float: right;
     display: flex;
   }
+
+  .lang{
+    float: right;
+    display: flex;
+    padding-right: 10px;
+  }
   
   .profile{
     float: right;

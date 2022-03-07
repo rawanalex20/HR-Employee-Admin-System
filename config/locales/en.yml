@@ -1,33 +1,189 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t "hello"
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t("hello") %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   "true": "foo"
-#
-# To learn more, please read the Rails Internationalization guide
-# available at https://guides.rubyonrails.org/i18n.html.
-
 en:
-  hello: "Hello world"
+  globals:
+    forms:
+      messages:
+        errors:
+          one error: "1 error prohibited this post from being saved:"
+          multiple errors: "%{count} error prohibited this post from being saved:"
+
+  divisions:
+    create:
+      success: "Division was successfully created."
+    update: 
+      success: "Division was successfully updated."
+    destroy: 
+      success: "Division was successfully destroyed."
+    index:
+      New division: "Add Division"
+      Name: "Name"
+      Description: "Description"
+      Manager: "Manager"
+      Teams: "Teams"
+    Name: "Name"
+    Description: "Description"
+    Manager: "Manager"
+    Teams: "Teams"
+  employees:
+    create:
+      success: "Employee was successfully created."
+    update: 
+      success: "Employee was successfully updated."
+    destroy: 
+      success: "Employee was successfully destroyed."
+    index:
+        New employee: "Add Employee"
+        Name: "Name"
+        Email: "Email"
+        Job: "Job"
+        Salary: "Salary"
+        Employment: "Employment"
+        Team: "Team"
+    Name: "Name"
+    Email: "Email"
+    Job: "Job"
+    Salary: "Salary"
+    Employment status: "Employment status"
+    Team: "Team"
+  teams:
+    create:
+      success: "Team was successfully created."
+    update: 
+      success: "Team was successfully updated."
+    destroy: 
+      success: "Team was successfully destroyed."
+    index:
+        New team: "Add Team"
+        Name: "Name"
+        Description: "Description"
+        Team lead: "Team lead"
+        Members: "Members"
+    Name: "Name"
+    Description: "Description"
+    Team lead: "Team lead "
+    Members: "Members"
+  targets:
+    create:
+      success: "Target was successfully created."
+    update: 
+      success: "Target was successfully updated."
+    destroy: 
+      success: "Target was successfully destroyed."
+    index:
+        New target: "Add Target"
+        Title: "Title"
+        Description: "Description"
+        Start date: "Start date"
+        Finish date: "Finish date"
+        Status: "Status"
+        Team: "Team"
+    Title: "Title"
+    Description: "Description"
+    Start date: "Start date"
+    Finish date: "Finish date"
+    Status: "Status"
+    Team: "Team"
+  users:
+    create:
+      success: "User was successfully created."
+    update: 
+      success: "User was successfully updated."
+    destroy: 
+      success: "User was successfully destroyed."
+    index:
+        New user: "New user"
+        Name: "Name"
+        Email: "Email"
+        Sign in count: "Sign in count"
+        Current sign in: "Current sign in"
+        Last sign in: "Last sign in"
+    form:
+      Confirmation: "Password Confirmation"
+      Browse: "Browse"
+    delete_profile:
+      success: "Profile was successfully deleted"
+    Name: "Name"
+    Email: "Email"
+    Password: "Password"
+    Password Confirmation: "Password Confirmation"
+
+  
+  Divisions: "Divisions"
+  Employees: "Employees"
+  Targets: "Targets"
+  Teams: "Teams"
+  Users: "Users"
+  Profile: "Profile"
+
+  New Division: "New Division"
+  Show this division: "Show this division"
+  Back to divisions: "Back to divisions"
+  Edit this division: "Edit this division"
+  Editing division: "Editing division"
+  Destroy this division: "Destroy this division"
+
+  New Employee: "New Employee"
+  Show this employee: "Show this employee"
+  Back to employees: "Back to employees"
+  Edit this employee: "Edit this employee"
+  Editing employee: "Editing employee"
+  Destroy this employee: "Destroy this employee"
+
+  New Target: "New Target"
+  Show this target: "Show this target"
+  Back to targets: "Back to targets"
+  Edit this target: "Edit this target"
+  Editing target: "Editing target"
+  Destroy this target: "Destroy this target"
+
+  New Team: "New Team"
+  Show this team: "Show this team"
+  Back to teams: "Back to teams"
+  Edit this team: "Edit this team"
+  Editing team: "Editing team"
+  Destroy this team: "Destroy this team"
+  
+  New User: "New User"
+  Show this user: "Show this user"
+  Back to users: "Back to users"
+  Edit this user: "Edit this user"
+  Editing user: "Editing user"
+  Destroy this user: "Destroy this user"
+  
+  Edit: "Edit"
+  Delete: "Delete"
+  Show: "Show"
+
+  HR Admin System: "HR Admin System"
+
+  user_mailer:
+      new_user_email:
+        subject: "Welcome %{user}"
+        Welcome: "Welcome"
+        Name: "Name"
+        Email: "Email"
+        User details: "User details"
+  
+  layouts:
+    application:
+        HREmployeeAdminSystem: "HR Employee Admin System"
+        Sign out: "Logout"
+    top_nav:
+      lang: "en"
+
+  devise:
+    registrations:
+      new:
+        Sign up: "Sign up"
+        characters minimum: "characters minimum"
+    shared:
+      links:
+        Log in: "Log in"
+        Sign up: "Sign up"
+        Forgot your password?: "Forgot your password?"
+    sessions:
+      new:
+        Log in: "Log in"
+    passwords:
+      new:
+        Forgot your password?: "Forgot your password?"
+        Send me reset password instructions: "Send me reset password instructions"
