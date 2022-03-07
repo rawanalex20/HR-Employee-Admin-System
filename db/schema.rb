@@ -95,8 +95,8 @@ ActiveRecord::Schema.define(version: 2022_03_07_065453) do
     t.string "email"
     t.string "password"
     t.integer "sign_in_count", default: 0, null: false
-    t.datetime "last_sign_in_count", precision: 6
-    t.datetime "current_sign_in_count", precision: 6
+    t.datetime "last_sign_in", precision: 6
+    t.datetime "current_sign_in", precision: 6
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
