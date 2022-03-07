@@ -21,8 +21,6 @@
     <div class="profile">
       <% if user_signed_in?%>
         <a href="/users/<%=current_user.id%>"><%=current_user.name%></a>
-      <%else%>
-        <a href="/users" class="w3-bar-item w3-button">Profile</a>
       <%end%>
     </div>
   </div>
