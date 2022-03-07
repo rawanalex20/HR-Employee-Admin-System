@@ -208,9 +208,9 @@ ar:
   layouts:
     application:
       HREmployeeAdminSystem: "إدارة الموارد البشرية"
-      Sign out: "خروج"
     top_nav:
       lang: "العريبة"
+      Sign out: "خروج"
 
   devise:
     registrations:
