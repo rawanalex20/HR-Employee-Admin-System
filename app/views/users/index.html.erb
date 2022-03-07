@@ -7,6 +7,9 @@
 <tr>
   <th>Name</th>
   <th>Email</th>
+  <th>Sign in count</th>
+  <th>Current sign in</th>
+  <th>Last sign in</th>
   <th></th>
 </tr>
 
@@ -14,6 +17,21 @@
   <tr>
   <td><%= user.name %></td>
   <td><%= user.email %></td>
+  <td><%= user.sign_in_count %></td>
+  <td>
+  <%unless user.current_sign_in == nil%>
+  <%= user.current_sign_in %>
+  <%else%>
+  signed out
+  <%end%>
+  </td>
+  <td>
+  <%unless user.last_sign_in == nil%>
+  <%= user.current_sign_in %>
+  <%else%>
+  -
+  <%end%>
+  </td>
   <td>
     <div class="tb-btns"><%= button_to "Show", user, method: :get %></div>
     <div class="tb-btns"><%= button_to "Edit", edit_user_path(user), method: :get %></div>
