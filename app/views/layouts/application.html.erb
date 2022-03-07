@@ -13,15 +13,9 @@
   <body>
   <%= render "layouts/top_nav" %>
 
-  <div class="w3-sidebar w3-light-grey w3-bar-block">
+  <%= render "layouts/side_nav" %>
 
-    <a href="/users" class="w3-bar-item w3-button">Users</a>
-    <a href="/employees" class="w3-bar-item w3-button">Employees</a>
-    <a href="/teams" class="w3-bar-item w3-button">Teams</a>
-    <a href="/divisions" class="w3-bar-item w3-button">Divisions</a>
-    <a href="/targets" class="w3-bar-item w3-button">Targets</a>
-
-  </div>
+  
   <div class="main" style="margin-left:15%">  
   <p class="alert"><%= alert %></p>
     <%= yield %>
