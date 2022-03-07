@@ -54,23 +54,21 @@
     display: flex;
   }
 
-  .topnav{
-    height: 70px;
-    display: block;
-    padding: 5px 5px 5px 5px;
-  }
-
   .topnav .title{
     float: left;
     color: #f2f2f2;
     text-decoration: none;
     font-size: 25px;
+    margin-left: 10px;
   }
 
   .w3-sidebar{
     width: 15%; 
     padding-top: 20px; 
     font-size: 20px;
+    height: auto;
+    position: static !important;
+    font-size: 15px;
   }
 
   .new-record{
@@ -86,12 +84,16 @@
 
   body {
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Segoe UI",Arial,sans-serif;
   }
   
   .topnav {
     overflow: hidden;
+    position: relative;
     background-color: #333;
+    height: 70px;
+    display: block;
+    padding: 5px 5px 5px 5px;
   }
   
   .topnav a {
@@ -112,22 +114,25 @@
   }
 
   .footer{
+    position:relative;
+    bottom:0;
     display: block;
-    position: sticky;
     padding: 10px 10px 10px 10px;
     text-align: center;
-    background-color: #04AA6D;
+    color: #333;
+    margin-bottom: 5%;
   }
 
-  .w3-sidebar {
-    height: auto;
-    position: static !important;
+  .app-container{
+    display: flex;
   }
 
   .container{
-    display: flex;
+    display: block;
+    width: 80%;
   }
 
   .main{
     margin-left: 1%;
+    margin-bottom: 30%;
   }
