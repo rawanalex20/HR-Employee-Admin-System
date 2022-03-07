@@ -2,15 +2,15 @@
 
 <h1>Teams</h1>
 
+<div class="new-record"><%= button_to "Add Team", new_team_path, method: :get %></div>
+
 <div id="teams">
   <table>
   <tr>
     <th>Name</th>
     <th>Description</th>
-    <th>Team lead </th>
     <th>Members </th>
-    <th></th>
-    <th></th>
+    <th>Team lead </th>
     <th></th>
   </tr>
 
@@ -24,7 +24,6 @@
     
     <td><%= team.name %></td>
     <td><%= team.description %></td>
-    <td><%= lead %></td>
     <td>
     <% employees = [] %>
     <% team.employees.each do |employee| %>
@@ -33,13 +32,15 @@
       </div>
     <% end%>
     </td>
-    <td><%= link_to "Show", team %></td>
-    <td><%= link_to "Edit", edit_team_path(team) %></td>
-    <td><%= button_to "Delete", team, method: :delete %></td>
+    <td><%= lead %></td>
+    <td>
+      <div class="tb-btns"><%= button_to "Show", team, method: :get %></div>
+      <div class="tb-btns"><%= button_to "Edit", edit_team_path(team), method: :get %></div>
+      <div class="tb-btns"><%= button_to "Delete", team, method: :delete %></div>
+    </td>
     </tr>
     
   <% end %>
 </table>
 </div>
 
-<%= link_to "New team", new_team_path %>

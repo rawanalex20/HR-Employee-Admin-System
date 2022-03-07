@@ -1,8 +1,0 @@
-<h1>HR Admin System</h1>
-
-<%if user_signed_in?%>
-<%= render "home/main"%>
-<%else%>
-<li><%= button_to 'Sign up', new_user_registration_path, method: :get%></li><br>
-<li><%= button_to 'Sign in', new_user_session_path%></li><br>
-<%end%>

@@ -19,12 +19,14 @@
     border-spacing: 0;
     width: 100%;
     border: 1px solid #ddd;
+    font-size: large;
   }
   
   th, td {
     text-align: left;
     vertical-align: top;
     padding: 16px;
+    text-align: center;
   }
   
   th {
@@ -37,11 +39,45 @@
   
   .main {
     margin-left: 140px; /* Same width as the sidebar + left position in px */
-    font-size: 20px; /* Increased text to enable scrolling */
+    font-size: 20px;
     padding: 0px 10px;
   }
 
-  .sign_out{
+  .sign-out{
     float: right;
     padding: 0px 50px 0px 0px;
+    display: block;
+  }
+  
+  .profile{
+    float: right;
+    display: block;
+    padding-right: 10px;
+  }
+
+  .top-bar{
+    height: 70px;
+    display: block;
+    padding: 5px 5px 5px 5px;
+  }
+
+  .title{
+    float: left;
+  }
+
+  .w3-sidebar{
+    width: 15%; 
+    padding-top: 20px; 
+    font-size: 20px;
+  }
+
+  .new-record{
+    float: right;
+    display: block;
+    padding-bottom: 10px;
+  }
+
+  .tb-btns{
+    float: left;
+    padding-left: 10px;
   }
