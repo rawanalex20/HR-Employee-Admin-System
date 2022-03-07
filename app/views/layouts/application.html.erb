@@ -11,21 +11,7 @@
   </head>
 
   <body>
-  <div class="top-bar">
-    <h2 class="title">HR Admin System</h2>
-    <div class="sign-out">
-      <%if user_signed_in?%>
-        <%= button_to 'Logout', destroy_user_session_path, method: :delete%>
-      <%end%>
-    </div>
-    <div class="profile">
-      <% if user_signed_in?%>
-        <a href="/users/<%=current_user.id%>"><%=current_user.name%></a>
-      <%end%>
-    </div>
-  </div>
-
-  
+  <%= render "layouts/top_nav" %>
 
   <div class="w3-sidebar w3-light-grey w3-bar-block">
 
@@ -36,7 +22,7 @@
     <a href="/targets" class="w3-bar-item w3-button">Targets</a>
 
   </div>
-  <div class="main" style="margin-left:15%">
+  <div class="main" style="margin-left:15%">  
   <p class="alert"><%= alert %></p>
     <%= yield %>
   </div>
