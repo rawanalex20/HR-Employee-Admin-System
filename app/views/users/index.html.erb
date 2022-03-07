@@ -5,10 +5,11 @@
 <div id="users">
 <table>
 <tr>
-  <th><%= t '.Name', default: 'not exist'%></th>
-  <th><%= t '.Email', default: 'not exist'%></th>
-  <th></th>
-  <th></th>
+  <th><%= t'.Name', default: 'not found'%></th>
+  <th><%= t '.Email', default: 'not found'%></th>
+  <th><%= t '.Sign in count', default: 'not found'%></th>
+  <th><%= t '.Current sign in', default: 'not found'%></th>
+  <th><%= t '.Last sign in', default: 'not found'%></th>
   <th></th>
 </tr>
 
@@ -16,13 +17,28 @@
   <tr>
   <td><%= user.name %></td>
   <td><%= user.email %></td>
-  <td><%= link_to t("Show"), user %></td>
-  <td><%= link_to t("Edit"), edit_user_path(user) %></td>
-  <td><%= button_to t("Delete"), user, method: :delete %></td>
+  <td><%= user.sign_in_count %></td>
+  <td>
+  <%unless user.current_sign_in == nil%>
+  <%= user.current_sign_in %>
+  <%else%>
+  signed out
+  <%end%>
+  </td>
+  <td>
+  <%unless user.last_sign_in == nil%>
+  <%= user.current_sign_in %>
+  <%else%>
+  -
+  <%end%>
+  </td>
+  <td>
+    <div class="tb-btns"><%= button_to t("Show"), user, method: :get %></div>
+    <div class="tb-btns"><%= button_to t("Edit"), edit_user_path(user), method: :get %></div>
+    <div class="tb-btns"><%= button_to t("Delete"), user, method: :delete %></div>
+  </td>
   </tr>
   
 <% end %>
 </table>
 </div>
-
-<%= link_to t(".New user"), new_user_path %>

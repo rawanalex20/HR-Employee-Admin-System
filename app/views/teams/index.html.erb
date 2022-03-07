@@ -2,15 +2,15 @@
 
 <h1><%= t 'Teams', default: 'not exist'%></h1>
 
+<div class="new-record"><%= button_to t(".New team"), new_team_path, method: :get %></div>
+
 <div id="teams">
   <table>
   <tr>
     <th><%= t '.Name', default: 'not exist'%></th>
     <th><%= t '.Description', default: 'not exist'%></th>
-    <th><%= t '.Team lead', default: 'not exist'%> </th>
     <th><%= t '.Members', default: 'not exist'%> </th>
-    <th></th>
-    <th></th>
+    <th><%= t '.Team lead', default: 'not exist'%> </th>
     <th></th>
   </tr>
 
@@ -24,7 +24,6 @@
     
     <td><%= team.name %></td>
     <td><%= team.description %></td>
-    <td><%= lead %></td>
     <td>
     <% employees = [] %>
     <% team.employees.each do |employee| %>
@@ -33,13 +32,14 @@
       </div>
     <% end%>
     </td>
-    <td><%= link_to t("Show"), team %></td>
-    <td><%= link_to t("Edit"), edit_team_path(team) %></td>
-    <td><%= button_to t("Delete"), team, method: :delete %></td>
+    <td><%= lead %></td>
+    <td>
+      <div class="tb-btns"><%= button_to t("Show"), team, method: :get %></div>
+      <div class="tb-btns"><%= button_to t("Edit"), edit_team_path(team), method: :get %></div>
+      <div class="tb-btns"><%= button_to t("Delete"), team, method: :delete %></div>
+    </td>
     </tr>
     
   <% end %>
 </table>
 </div>
-
-<%= link_to t(".New team"), new_team_path %>

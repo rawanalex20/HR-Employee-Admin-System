@@ -11,41 +11,44 @@
   </head>
 
   <body>
-  <div class="sign_out">
-  <% locale = I18n.locale%>
-  <% if locale == :en%>
-    <% locale = :ar%>
-  <% else%>
-    <% locale = :en%>
-  <% end%>
-  <% current_uri = request.env['PATH_INFO']%>
-  
-  <%= link_to t(".lang"), switch_url(locale: locale, path: current_uri) %>
-  <%if user_signed_in?%>
-  <%= button_to t('.Sign out'), destroy_user_session_path, method: :delete%>
-  <%end%>
+  <div class="top-bar">
+  <h2 class="title">HR Admin System</h2>
+    <div class="sign-out">
+      <% locale = I18n.locale%>
+      <% if locale == :en%>
+        <% locale = :ar%>
+      <% else%>
+        <% locale = :en%>
+      <% end%>
+      <% current_uri = request.env['PATH_INFO']%>
+      <%if user_signed_in?%>
+        <%= button_to t('.Sign out'), destroy_user_session_path, method: :delete%>
+      <%end%>
+    </div>
+    <div class="lang">
+      <%= link_to t(".lang"), switch_url(locale: locale, path: current_uri) %>
+    </div>
+    <div class="profile">
+      <% if user_signed_in?%>
+        <a href="/users/<%=current_user.id%>"><%=current_user.name%></a>
+      <%end%>
+    </div>
   </div>
 
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
+  
 
-  <base href="http://127.0.0.1:3000/" />
-  <div class="w3-sidebar w3-light-grey w3-bar-block" style="width:15%">
-    
-    <h3 class="w3-bar-item" ><%= t 'Menu', default: 'not exist'%></h3>
-    <a href="/home" class="w3-bar-item w3-button"><%= t 'Home', default: 'not found'%></a>
-    <a href="/divisions" class="w3-bar-item w3-button"><%= t 'Divisions', default: 'not found'%></a>
-    <a href="/employees" class="w3-bar-item w3-button"><%= t 'Employees', default: 'not found'%></a>
-    <a href="/targets" class="w3-bar-item w3-button"><%= t 'Targets', default: 'not found'%></a>
-    <a href="/teams" class="w3-bar-item w3-button"><%= t 'Teams', default: 'not found'%></a>
+  <div class="w3-sidebar w3-light-grey w3-bar-block">
+
     <a href="/users" class="w3-bar-item w3-button"><%= t 'Users', default: 'not found'%></a>
-    <% if user_signed_in?%>
-    <a href="/users/<%=current_user.id%>" class="w3-bar-item w3-button"><%= t 'Profile', default: 'not found'%></a>
-    <%else%>
-    <a href="/users" class="w3-bar-item w3-button"><%= t 'Profile', default: 'not found'%></a>
-    <%end%>
+    <a href="/employees" class="w3-bar-item w3-button"><%= t 'Employees', default: 'not found'%></a>
+    <a href="/teams" class="w3-bar-item w3-button"><%= t 'Teams', default: 'not found'%></a>
+    <a href="/divisions" class="w3-bar-item w3-button"><%= t 'Divisions', default: 'not found'%></a>
+    <a href="/targets" class="w3-bar-item w3-button"><%= t 'Targets', default: 'not found'%></a>
+
   </div>
   <div class="main" style="margin-left:15%">
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
     <%= yield %>
   </div>
   </body>

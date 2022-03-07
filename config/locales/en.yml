@@ -14,7 +14,7 @@ en:
     destroy: 
       success: "Division was successfully destroyed."
     index:
-      New division: "New division"
+      New division: "Add Division"
       Name: "Name"
       Description: "Description"
       Manager: "Manager"
@@ -31,12 +31,12 @@ en:
     destroy: 
       success: "Employee was successfully destroyed."
     index:
-        New employee: "New employee"
+        New employee: "Add Employee"
         Name: "Name"
         Email: "Email"
         Job: "Job"
         Salary: "Salary"
-        Employment status: "Employment status"
+        Employment: "Employment"
         Team: "Team"
     Name: "Name"
     Email: "Email"
@@ -52,7 +52,7 @@ en:
     destroy: 
       success: "Team was successfully destroyed."
     index:
-        New team: "New team"
+        New team: "Add Team"
         Name: "Name"
         Description: "Description"
         Team lead: "Team lead"
@@ -69,7 +69,7 @@ en:
     destroy: 
       success: "Target was successfully destroyed."
     index:
-        New target: "New target"
+        New target: "Add Target"
         Title: "Title"
         Description: "Description"
         Start date: "Start date"
@@ -93,6 +93,9 @@ en:
         New user: "New user"
         Name: "Name"
         Email: "Email"
+        Sign in count: "Sign in count"
+        Current sign in: "Current sign in"
+        Last sign in: "Last sign in"
     delete_profile:
       success: "Profile was successfully deleted"
     Name: "Name"
@@ -167,7 +170,7 @@ en:
   layouts:
     application:
         HREmployeeAdminSystem: "HR Employee Admin System"
-        Sign out: "Sign out"
+        Sign out: "Logout"
         lang: "en"
 
   devise:

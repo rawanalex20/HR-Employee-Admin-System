@@ -2,17 +2,17 @@
 
 <h1><%= t 'Targets', default: 'not exist'%></h1>
 
+<div class="new-record"><%= button_to t(".New target"), new_target_path, method: :get %></div>
+
 <div id="targets">
 <table>
   <tr>
-    <th><%= t '.Title', default: 'not exist'%></th>
-    <th><%= t '.Description', default: 'not exist'%></th>
-    <th><%= t '.Start date', default: 'not exist'%></th>
-    <th><%= t '.Finish date', default: 'not exist'%></th>
-    <th><%= t '.Team', default: 'not exist'%></th>
-    <th><%= t '.Status', default: 'not exist'%></th>
-    <th></th>
-    <th></th>
+    <th><%= t '.Title', default: 'not found'%></th>
+    <th><%= t '.Description', default: 'not found'%></th>
+    <th><%= t '.Team', default: 'not found'%></th>
+    <th><%= t '.Start date', default: 'not found'%></th>
+    <th><%= t '.Finish date', default: 'not found'%></th>
+    <th><%= t '.Status', default: 'not found'%></th>
     <th></th>
   </tr>
 
@@ -25,17 +25,17 @@
     <% end %>
     <td><%= target.title %></td>
     <td><%= target.description %></td>
+    <td><%= team %></td>
     <td><%= target.start_date.strftime("%Y-%m-%d") %></td>
     <td><%= target.finish_date.strftime("%Y-%m-%d") %></td>
-    <td><%= team %></td>
     <td><%= target.status %></td>
-    <td><%= link_to t("Show"), target %></td>
-    <td><%= link_to t("Edit"), edit_target_path(target) %></td>
-    <td><%= button_to t("Delete"), target, method: :delete %></td>
+    <td>
+      <div class="tb-btns"><%= button_to t("Show"), target, method: :get %></div> 
+      <div class="tb-btns"><%= button_to t("Edit"), edit_target_path(target), method: :get %></div>
+      <div class="tb-btns"><%= button_to t("Delete"), target, method: :delete %></div>
+    </td>
     </tr>
     
   <% end %>
 </table>
 </div>
-
-<%= link_to t(".New target"), new_target_path %>

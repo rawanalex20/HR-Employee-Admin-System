@@ -83,7 +83,7 @@ ar:
     Email: "البريد الاكتروني"
     Job: "الوظيفة"
     Salary: "الراتب"
-    Employment status: "الحالة الوظيفية"
+    Employment: "الحالة الوظيفية"
     Team: "الفريق"
   teams:
     create:
@@ -134,6 +134,9 @@ ar:
       New user: "مستخدم جديد"
       Name: "الاسم"
       Email: "البريد الالكتروني"
+      Sign in count: "عدد مرات الدخول"
+      Current sign in: "وقت التسجيل الحالي"
+      Last sign in: "آخر وقت للتسجيل"
     delete_profile:
       success: "حذفت الصورة بنجاح"
     Name: "الاسم"
