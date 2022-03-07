@@ -40,7 +40,7 @@
   .main {
     margin-left: 140px; /* Same width as the sidebar + left position in px */
     font-size: 20px;
-    padding: 0px 10px;
+    padding: 0px 0px;
   }
 
   .sign-out{
@@ -109,4 +109,25 @@
   .topnav a.active {
     background-color: #04AA6D;
     color: white;
+  }
+
+  .footer{
+    display: block;
+    position: sticky;
+    padding: 10px 10px 10px 10px;
+    text-align: center;
+    background-color: #04AA6D;
+  }
+
+  .w3-sidebar {
+    height: auto;
+    position: static !important;
+  }
+
+  .container{
+    display: flex;
+  }
+
+  .main{
+    margin-left: 1%;
   }

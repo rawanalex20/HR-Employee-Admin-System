@@ -12,13 +12,15 @@
 
   <body>
   <%= render "layouts/top_nav" %>
-
+ <div class="container">
   <%= render "layouts/side_nav" %>
 
   
-  <div class="main" style="margin-left:15%">  
+  <div class="main">  
   <p class="alert"><%= alert %></p>
     <%= yield %>
   </div>
+  </div>
+  <%= render "layouts/footer" %>
   </body>
 </html>
