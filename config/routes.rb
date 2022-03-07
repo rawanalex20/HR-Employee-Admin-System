@@ -5,7 +5,11 @@ Rails.application.routes.draw do
   resources :divisions
   resources :teams
   resources :employees
-  resources :users
+  resources :users do
+    member do
+      delete 'delete_profile', to: 'users#delete_profile', as: 'delete_profile'
+    end
+  end
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
