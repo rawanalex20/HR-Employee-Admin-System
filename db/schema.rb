@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_02_26_080428) do
+ActiveRecord::Schema.define(version: 2022_02_27_082436) do
 
   create_table "divisions", force: :cascade do |t|
     t.string "name"
@@ -57,13 +57,23 @@ ActiveRecord::Schema.define(version: 2022_02_26_080428) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "email"
     t.string "name"
-    t.string "password"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at", precision: 6
+    t.datetime "remember_created_at", precision: 6
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+    t.integer "sign_in_count", default: 0, null: false
+    t.datetime "last_sign_in", precision: 6
+    t.datetime "current_sign_in", precision: 6
   end
 
+  add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "divisions", "employees", column: "manager_id"
   add_foreign_key "employees", "teams"
   add_foreign_key "targets", "teams"

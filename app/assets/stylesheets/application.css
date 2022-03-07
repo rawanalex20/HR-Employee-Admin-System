@@ -40,3 +40,8 @@
     font-size: 20px; /* Increased text to enable scrolling */
     padding: 0px 10px;
   }
+
+  .sign_out{
+    float: right;
+    padding: 0px 50px 0px 0px;
+  }
