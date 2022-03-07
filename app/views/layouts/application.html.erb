@@ -11,33 +11,36 @@
   </head>
 
   <body>
-  <div class="sign_out">
-  <%if user_signed_in?%>
-  <%= button_to 'Sign out', destroy_user_session_path, method: :delete%>
-  <%end%>
+  <div class="top-bar">
+  <h2 class="title">HR Admin System</h2>
+    <div class="sign-out">
+      <%if user_signed_in?%>
+        <%= button_to 'Logout', destroy_user_session_path, method: :delete%>
+      <%end%>
+    </div>
+    <div class="profile">
+      <% if user_signed_in?%>
+        <a href="/users/<%=current_user.id%>"><%=current_user.name%></a>
+      <%else%>
+        <a href="/users" class="w3-bar-item w3-button">Profile</a>
+      <%end%>
+    </div>
   </div>
 
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
+  
 
-  <base href="http://127.0.0.1:3000/" />
-  <div class="w3-sidebar w3-light-grey w3-bar-block" style="width:15%">
-    
-    <h3 class="w3-bar-item" >Menu</h3>
-    <a href="/home" class="w3-bar-item w3-button">Home</a>
-    <a href="/divisions" class="w3-bar-item w3-button">Divisions</a>
-    <a href="/employees" class="w3-bar-item w3-button">Employees</a>
-    <a href="/targets" class="w3-bar-item w3-button">Targets</a>
-    <a href="/teams" class="w3-bar-item w3-button">Teams</a>
+  <div class="w3-sidebar w3-light-grey w3-bar-block">
+
     <a href="/users" class="w3-bar-item w3-button">Users</a>
-    <% if user_signed_in?%>
-    <a href="/users/<%=current_user.id%>" class="w3-bar-item w3-button">Profile</a>
-    <%else%>
-    <a href="/users" class="w3-bar-item w3-button">Profile</a>
-    <%end%>
+    <a href="/employees" class="w3-bar-item w3-button">Employees</a>
+    <a href="/teams" class="w3-bar-item w3-button">Teams</a>
+    <a href="/divisions" class="w3-bar-item w3-button">Divisions</a>
+    <a href="/targets" class="w3-bar-item w3-button">Targets</a>
 
   </div>
   <div class="main" style="margin-left:15%">
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
     <%= yield %>
   </div>
   </body>
