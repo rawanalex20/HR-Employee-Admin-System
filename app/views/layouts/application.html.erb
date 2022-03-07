@@ -12,7 +12,7 @@
 
   <body>
   <div class="top-bar">
-  <h2 class="title">HR Admin System</h2>
+    <h2 class="title">HR Admin System</h2>
     <div class="sign-out">
       <%if user_signed_in?%>
         <%= button_to 'Logout', destroy_user_session_path, method: :delete%>
@@ -37,7 +37,6 @@
 
   </div>
   <div class="main" style="margin-left:15%">
-  <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
     <%= yield %>
   </div>
