@@ -27,6 +27,12 @@ Run the following command in the root directory to install all required gems<br>
 Run the following command to initialize server<br>
 `rails server`
 
+### Mailhog Setting
+
+To test mails install mailhog and check the right address and port used are added in developement environment settings
+
+Follow [Installation guide](https://github.com/mailhog/MailHog)
+
 ## Demo
 
 https://user-images.githubusercontent.com/63899074/155841339-9f97425f-bb28-4557-9904-5f7d67d9000c.mp4
