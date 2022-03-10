@@ -9,9 +9,7 @@ Rails.application.routes.draw do
       delete 'delete_profile', to: 'users#delete_profile', as: 'delete_profile'
     end
   end
-  get '*path', to: 'application#switch_locale', as: 'switch'
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  # Defines the root path route ("/")
+  get '*path?locale=:locale', to: 'application#switch_locale', as: 'switch'
   root "users#index"
+  
 end
