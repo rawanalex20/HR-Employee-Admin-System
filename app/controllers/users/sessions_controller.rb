@@ -8,15 +8,25 @@ class Users::SessionsController < Devise::SessionsController
   #   super
   # end
 
+  @@resource = nil
   # POST /resource/sign_in
-  # def create
-  #   super
-  # end
+  def create
+    super do |resource|
+      resource.sign_in_count += 1
+      resource.current_sign_in = DateTime.now
+      resource.save
+      @@resource = resource
+    end
+  end
 
   # DELETE /resource/sign_out
-  # def destroy
-  #   super
-  # end
+  def destroy
+    super do
+      @@resource.last_sign_in = DateTime.now
+      @@resource.current_sign_in = nil
+      @@resource.save
+    end
+  end
 
   # protected
 

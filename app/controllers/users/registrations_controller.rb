@@ -10,9 +10,14 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # end
 
   # POST /resource
-  # def create
-  #   super
-  # end
+  def create
+    super do |resource|
+      resource.sign_in_count += 1
+      resource.current_sign_in = DateTime.now
+      resource.save
+      @@resource = resource
+    end
+  end
 
   # GET /resource/edit
   # def edit
