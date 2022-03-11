@@ -8,7 +8,7 @@ class Users::SessionsController < Devise::SessionsController
   #   super
   # end
 
-  @@resource = nil
+  @@resource = User.where.not(current_sign_in: nil)[0]
   # POST /resource/sign_in
   def create
     super do |resource|
