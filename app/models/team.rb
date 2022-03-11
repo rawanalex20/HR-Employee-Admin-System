@@ -5,4 +5,6 @@ class Team < ApplicationRecord
     has_many :employees, dependent: :nullify
     belongs_to :division, class_name: "Division", optional: true
     belongs_to :employee, optional: true, class_name: "Team"
+
+    accepts_nested_attributes_for :targets, :employees
 end

@@ -6,4 +6,6 @@ class Employee < ApplicationRecord
     belongs_to :team, optional: true, class_name: "Team", optional: true
     has_one :division, foreign_key: "manager_id", dependent: :nullify
     has_one :team, foreign_key: "team_lead_id", dependent: :nullify
+    
+    accepts_nested_attributes_for :division, :team
 end
