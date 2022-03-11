@@ -101,6 +101,13 @@ en:
       Browse: "Browse"
     delete_profile:
       success: "Profile was successfully deleted"
+    registrations:
+      new:
+        Sign up: "Sign up"
+        characters minimum: "characters minimum"
+    sessions:
+      new:
+        Log in: "Log in"
     Name: "Name"
     Email: "Email"
     Password: "Password"

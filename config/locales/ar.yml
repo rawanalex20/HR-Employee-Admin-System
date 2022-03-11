@@ -139,6 +139,14 @@ ar:
       Last sign in: "آخر وقت للتسجيل"
     delete_profile:
       success: "حذفت الصورة بنجاح"
+    sessions:
+      new:
+        Log in: "تسجيل دخول"
+    registrations:
+      new:
+        Sign up: "حساب جديد"
+        characters minimum: "رموز أقل عدد"
+
     Name: "الاسم"
     Email: "البريد الالكتروني"
     Password: "كلمة المرور"
