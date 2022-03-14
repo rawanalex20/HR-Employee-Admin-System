@@ -17,7 +17,13 @@
     </div>
     <div class="profile">
     <% if user_signed_in?%>
-        <a href="/users/<%=current_user.id%>"><%=current_user.name%></a>
+        <a href="/users/<%=current_user.id%>">
+        <% unless current_user.name == nil %>
+        <%=current_user.name %>
+        <%else%> 
+        user_name
+        <% end %>
+        </a>
     <%end%>
     </div>
 </div>
