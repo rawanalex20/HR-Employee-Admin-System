@@ -20,14 +20,14 @@
   <td><%= user.sign_in_count %></td>
   <td>
   <%unless user.current_sign_in == nil%>
-  <%= user.current_sign_in %>
+  <%= user.current_sign_in.strftime('%d-%m-%Y %I:%M %p') %>
   <%else%>
   signed out
   <%end%>
   </td>
   <td>
   <%unless user.last_sign_in == nil%>
-  <%= user.current_sign_in %>
+  <%= user.last_sign_in.strftime('%d-%m-%Y %I:%M %p') %>
   <%else%>
   -
   <%end%>
