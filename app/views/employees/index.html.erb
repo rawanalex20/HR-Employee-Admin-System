@@ -2,7 +2,7 @@
 
 <h1><%= t 'Employees', default: 'not exist'%></h1>
 
-<div class="new-record"><%= button_to t(".New employee"), new_employee_path, method: :get %></div>
+<div class="new-record"><%= button_to t(".New employee"), new_employee_path, method: :get, class:"btn btn-primary" %></div>
 
 <div id="employees">
 <table class="table table-hover">
@@ -32,9 +32,9 @@
   <td><%= team %></td>
   <td><%= employee.employment_status %></td>
   <td>
-    <div class="tb-btns"><%= button_to t("Show"), employee, method: :get %></div>
-    <div class="tb-btns"><%= button_to t("Edit"), edit_employee_path(employee), method: :get %></div>
-    <div class="tb-btns"><%= button_to t("Delete"), employee, method: :delete %></div>
+    <div class="tb-btns"><%= button_to t("Show"), employee, method: :get, class: "btn btn-secondary"  %></div>
+    <div class="tb-btns"><%= button_to t("Edit"), edit_employee_path(employee), method: :get, class: "btn btn-secondary"  %></div>
+    <div class="tb-btns"><%= button_to t("Delete"), employee, method: :delete, class: "btn btn-secondary"  %></div>
   </td>
   </tr>
   

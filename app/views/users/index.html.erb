@@ -35,9 +35,9 @@
   <%end%>
   </td>
   <td>
-    <div class="tb-btns"><%= button_to t("Show"), user, method: :get %></div>
-    <div class="tb-btns"><%= button_to t("Edit"), edit_user_path(user), method: :get %></div>
-    <div class="tb-btns"><%= button_to t("Delete"), user, method: :delete %></div>
+    <div class="tb-btns"><%= button_to t("Show"), user, method: :get, class: "btn btn-secondary" %></div>
+    <div class="tb-btns"><%= button_to t("Edit"), edit_user_path(user), method: :get, class: "btn btn-secondary" %></div>
+    <div class="tb-btns"><%= button_to t("Delete"), user, method: :delete, class: "btn btn-secondary"  %></div>
   </td>
   </tr>
   
