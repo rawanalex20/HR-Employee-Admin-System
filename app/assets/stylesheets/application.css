@@ -15,9 +15,10 @@
  */
 
   .main {
-    margin-left: 140px; /* Same width as the sidebar + left position in px */
+    margin-left: 1%; /* Same width as the sidebar + left position in px */
     font-size: 20px;
-    padding: 0px 0px;
+    padding: 20px 0px;
+    margin-bottom: 20%;
   }
 
   .sign-out{
@@ -114,11 +115,6 @@
   .container{
     display: block;
     width: 80%;
-  }
-
-  .main{
-    margin-left: 1%;
-    margin-bottom: 20%;
   }
 
   .users-header{
