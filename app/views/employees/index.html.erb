@@ -5,7 +5,8 @@
 <div class="new-record"><%= button_to t(".New employee"), new_employee_path, method: :get %></div>
 
 <div id="employees">
-<table>
+<table class="table table-hover">
+<thead>
 <tr>
   <th><%= t '.Name', default: 'not found'%></th>
   <th><%= t '.Email', default: 'not found'%></th>
@@ -15,6 +16,7 @@
   <th><%= t '.Employment', default: 'not found'%></th>
   <th></th>
 </tr>
+</thead>
 
 <% @employees.each do |employee| %>
   <tr>

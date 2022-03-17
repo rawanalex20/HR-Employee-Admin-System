@@ -5,7 +5,8 @@
 <div class="new-record"><%= button_to t(".New target"), new_target_path, method: :get %></div>
 
 <div id="targets">
-<table>
+<table class="table table-hover">
+<thead>
   <tr>
     <th><%= t '.Title', default: 'not found'%></th>
     <th><%= t '.Description', default: 'not found'%></th>
@@ -15,6 +16,7 @@
     <th><%= t '.Status', default: 'not found'%></th>
     <th></th>
   </tr>
+  </thead>
 
   <% @targets.each do |target| %>
     <tr>

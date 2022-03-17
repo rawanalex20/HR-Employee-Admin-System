@@ -5,7 +5,8 @@
 <div class="new-record"><%= button_to t(".New team"), new_team_path, method: :get %></div>
 
 <div id="teams">
-  <table>
+<table class="table table-hover">
+<thead>
   <tr>
     <th><%= t '.Name', default: 'not exist'%></th>
     <th><%= t '.Description', default: 'not exist'%></th>
@@ -13,6 +14,7 @@
     <th><%= t '.Team lead', default: 'not exist'%> </th>
     <th></th>
   </tr>
+  </thead>
 
   <% @teams.each do |team| %>
     <tr>
