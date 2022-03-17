@@ -1,4 +1,4 @@
-<div class="topnav">
+<div class="navbar-dark bg-dark topnav">
     <h2 class="title"><%= t 'HR Admin System', default: 'not found' %></h2>
     <% locale = I18n.locale%>
     <% if locale == :en%>
@@ -7,17 +7,18 @@
       <% locale = :en%>
     <% end%>
     <% current_uri = request.env['PATH_INFO']%>
+    <div>
     <a class="sign-out">
         <%if user_signed_in?%>
-        <%= button_to t('.Sign out'), destroy_user_session_path, method: :delete%>
+        <%= button_to t('.Sign out'), destroy_user_session_path, method: :delete, class: "btn btn-primary"%>
         <%end%>
     </a>
     <div class="lang">
-      <%= link_to t(".lang"), switch_url(locale: locale, path: current_uri) %>
+      <%= link_to t(".lang"), switch_url(locale: locale, path: current_uri), class: 'nav-link' %>
     </div>
     <div class="profile">
     <% if user_signed_in?%>
-        <a href="/users/<%=current_user.id%>">
+        <a href="/users/<%=current_user.id%>" class="nav-link">
         <% unless current_user.name == nil %>
         <%=current_user.name %>
         <%else%> 
@@ -25,5 +26,6 @@
         <% end %>
         </a>
     <%end%>
+    </div>
     </div>
 </div>
