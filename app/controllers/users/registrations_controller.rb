@@ -12,6 +12,8 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # POST /resource
   def create
     super do |resource|
+      SendUserMailJob.perform_now(resource)
+
       resource.sign_in_count += 1
       resource.current_sign_in = DateTime.now
       resource.save
