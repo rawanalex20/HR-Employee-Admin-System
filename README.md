@@ -35,5 +35,6 @@ Follow [Installation guide](https://github.com/mailhog/MailHog)
 
 ## Demo
 
-https://user-images.githubusercontent.com/63899074/155841339-9f97425f-bb28-4557-9904-5f7d67d9000c.mp4
+https://user-images.githubusercontent.com/63899074/159155060-85fbd32b-ae55-4f69-8a09-a939544560ca.mp4
+
 
