@@ -40,8 +40,5 @@
 /yarn-error.log
 yarn-debug.log*
 .yarn-integrity
-<<<<<<< HEAD
 # Ignore node modules.
 /node_modules
-=======
->>>>>>> dev
