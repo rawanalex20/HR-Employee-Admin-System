@@ -3,8 +3,8 @@
 <%= render @team %>
 
 <div>
-  <%= link_to "Edit this team", edit_team_path(@team) %> |
-  <%= link_to "Back to teams", teams_path %>
+  <%= link_to t("Edit this team"), edit_team_path(@team) %> |
+  <%= link_to t("Back to teams"), teams_path %>
 
-  <%= button_to "Destroy this team", @team, method: :delete %>
+  <%= button_to t("Destroy this team"), @team, method: :delete, class:"btn btn-primary"  %>
 </div>

@@ -1,30 +1,46 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Users</h1>
+<h1 class="users-header"><%= t 'Users', default: 'not found'%></h1>
 
 <div id="users">
-<table>
+<table class="table table-hover">
+<thead>
 <tr>
-  <th>Name</th>
-  <th>Email</th>
-  <th>Password</th>
-  <th></th>
-  <th></th>
+  <th><%= t'.Name', default: 'not found'%></th>
+  <th><%= t '.Email', default: 'not found'%></th>
+  <th><%= t '.Sign in count', default: 'not found'%></th>
+  <th><%= t '.Current sign in', default: 'not found'%></th>
+  <th><%= t '.Last sign in', default: 'not found'%></th>
   <th></th>
 </tr>
+</thead>
 
 <% @users.each do |user| %>
   <tr>
   <td><%= user.name %></td>
   <td><%= user.email %></td>
-  <td><%= user.password %></td>
-  <td><%= link_to "Show", user %></td>
-  <td><%= link_to "Edit", edit_user_path(user) %></td>
-  <td><%= button_to "Delete", user, method: :delete %></td>
+  <td><%= user.sign_in_count %></td>
+  <td>
+  <%unless user.current_sign_in == nil%>
+  <%= user.current_sign_in.strftime('%d-%m-%Y %I:%M %p') %>
+  <%else%>
+  signed out
+  <%end%>
+  </td>
+  <td>
+  <%unless user.last_sign_in == nil%>
+  <%= user.last_sign_in.strftime('%d-%m-%Y %I:%M %p') %>
+  <%else%>
+  -
+  <%end%>
+  </td>
+  <td>
+    <div class="tb-btns"><%= button_to t("Show"), user, method: :get, class: "btn btn-secondary" %></div>
+    <div class="tb-btns"><%= button_to t("Edit"), edit_user_path(user), method: :get, class: "btn btn-secondary" %></div>
+    <div class="tb-btns"><%= button_to t("Delete"), user, method: :delete, class: "btn btn-secondary"  %></div>
+  </td>
   </tr>
   
 <% end %>
 </table>
 </div>
-
-<%= link_to "New user", new_user_path %>

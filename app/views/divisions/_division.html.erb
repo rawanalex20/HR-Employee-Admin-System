@@ -1,11 +1,11 @@
 <div id="<%= dom_id division %>">
   <p>
-    <strong>Name:</strong>
+    <strong><%= t 'divisions.Name', default: 'not exist'%>:</strong>
     <%= division.name %>
   </p>
 
   <p>
-    <strong>Description:</strong>
+    <strong><%= t'divisions.Description', default: 'not exist'%>:</strong>
     <%= division.description %>
   </p>
 
@@ -15,7 +15,7 @@
       <% manager = employee.name %>
     <% end %>
   <p>
-    <strong>Manager:</strong>
+    <strong><%= t'divisions.Manager', default: 'not exist'%>:</strong>
     <%= manager %>
   </p>
 

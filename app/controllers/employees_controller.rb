@@ -1,5 +1,6 @@
 class EmployeesController < ApplicationController
   before_action :set_employee, only: %i[ show edit update destroy ]
+  before_action :authenticate_user!
 
   # GET /employees or /employees.json
   def index
@@ -25,7 +26,7 @@ class EmployeesController < ApplicationController
 
     respond_to do |format|
       if @employee.save
-        format.html { redirect_to employee_url(@employee), notice: "Employee was successfully created." }
+        format.html { redirect_to employee_url(@employee), notice: t('.success') }
         format.json { render :show, status: :created, location: @employee }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -39,7 +40,7 @@ class EmployeesController < ApplicationController
     respond_to do |format|
       if @employee.update(employee_params)
         
-        format.html { redirect_to employee_url(@employee), notice: "Employee was successfully updated." }
+        format.html { redirect_to employee_url(@employee), notice: t('.success') }
         format.json { render :show, status: :ok, location: @employee }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -53,7 +54,7 @@ class EmployeesController < ApplicationController
     @employee.destroy
 
     respond_to do |format|
-      format.html { redirect_to employees_url, notice: "Employee was successfully destroyed." }
+      format.html { redirect_to employees_url, notice: t('.success') }
       format.json { head :no_content }
     end
   end

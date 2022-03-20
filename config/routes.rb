@@ -1,12 +1,19 @@
 Rails.application.routes.draw do
-  get "/home", to: "home#index"
+  # devise_for :users
+  devise_for :users, controllers: {
+        sessions: 'users/sessions',
+        registrations: 'users/registrations'
+      }
   resources :targets
   resources :divisions
   resources :teams
   resources :employees
-  resources :users
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  # Defines the root path route ("/")
-  root "home#index"
+  resources :users do
+    member do
+      delete 'delete_profile', to: 'users#delete_profile', as: 'delete_profile'
+    end
+  end
+  get '*path?locale=:locale', to: 'application#switch_locale', as: 'switch'
+  root "users#index"
+  
 end

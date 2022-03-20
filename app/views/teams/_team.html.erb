@@ -1,11 +1,11 @@
 <div id="<%= dom_id team %>">
   <p>
-    <strong>Name:</strong>
+    <strong><%= t 'teams.Name', default: 'not exist'%>:</strong>
     <%= team.name %>
   </p>
 
   <p>
-    <strong>Description:</strong>
+    <strong><%= t 'teams.Description', default: 'not exist'%>:</strong>
     <%= team.description %>
   </p>
 
@@ -16,11 +16,11 @@
     <% end %>
 
   <p>
-    <strong>Team lead:</strong>
+    <strong><%= t 'teams.Team lead', default: 'not exist'%>:</strong>
     <%= lead %>
   </p>
   <p>
-    <strong>Members:</strong>
+    <strong><%= t 'teams.Members', default: 'not exist'%>:</strong>
     <% employees = [] %>
     <% team.employees.each do |employee| %>
       <div>

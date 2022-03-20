@@ -1,9 +1,9 @@
-<h1>New employee</h1>
+<h1><%= t 'New Employee', default: 'not exist'%></h1>
 
 <%= render "form", employee: @employee %>
 
 <br>
 
 <div>
-  <%= link_to "Back to employees", employees_path %>
+  <%= link_to t("Back to employees"), employees_path %>
 </div>

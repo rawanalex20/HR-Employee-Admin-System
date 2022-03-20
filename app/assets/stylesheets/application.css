@@ -14,29 +14,109 @@
  *= require_self
  */
 
- table {
-    border-collapse: collapse;
-    border-spacing: 0;
-    width: 100%;
-    border: 1px solid #ddd;
-  }
-  
-  th, td {
-    text-align: left;
-    vertical-align: top;
-    padding: 16px;
-  }
-  
-  th {
-    background-color: #f2f2f2;
-  }
-  
-  tr:nth-child(even) {
-    border: 1px solid #ddd;
-  }
-  
   .main {
-    margin-left: 140px; /* Same width as the sidebar + left position in px */
-    font-size: 20px; /* Increased text to enable scrolling */
-    padding: 0px 10px;
+    margin-left: 1%; /* Same width as the sidebar + left position in px */
+    font-size: 20px;
+    padding: 20px 0px;
+    margin-bottom: 20%;
+  }
+
+  .sign-out{
+    float: right;
+    display: flex;
+  }
+
+  .lang{
+    float: right;
+    display: flex;
+    padding-right: 10px;
+  }
+  
+  .profile{
+    float: right;
+    padding-right: 10px;
+    display: flex;
+  }
+
+  .topnav .title{
+    float: left;
+    color: #f2f2f2;
+    text-decoration: none;
+    font-size: 25px;
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+
+  .w3-sidebar{
+    width: 15%; 
+    padding-top: 20px; 
+    font-size: 20px;
+    height: auto;
+    position: static !important;
+    font-size: 15px;
+  }
+
+  .new-record{
+    float: right;
+    display: block;
+    padding-bottom: 10px;
+  }
+
+  .tb-btns{
+    float: left;
+    padding-left: 10px;
+  }
+
+  body {
+    margin: 0;
+    font-family: "Segoe UI",Arial,sans-serif;
+  }
+  
+  .topnav {
+    overflow: hidden;
+    position: relative;
+    background-color: #333;
+    height: 70px;
+    display: block;
+    padding: 5px 5px 5px 5px;
+  }
+  
+  .topnav a {
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .topnav a:hover {
+    background-color: transparent;
+  }
+  
+  .topnav a.active {
+    background-color: #04AA6D;
+    color: white;
+  }
+
+  .footer{
+    position:relative;
+    bottom:0;
+    display: block;
+    padding: 10px 10px 10px 10px;
+    text-align: center;
+    color: #333;
+    margin-bottom: 15%;
+  }
+
+  .app-container{
+    display: flex;
+  }
+
+  .container{
+    display: block;
+    width: 80%;
+  }
+
+  .users-header{
+    margin-bottom: 30px;
   }

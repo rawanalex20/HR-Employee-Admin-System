@@ -1,26 +1,26 @@
 <div id="<%= dom_id employee %>">
   <p>
-    <strong>Email:</strong>
+    <strong><%= t 'employees.Email', default: 'not found'%>:</strong>
     <%= employee.email %>
   </p>
 
   <p>
-    <strong>Name:</strong>
+    <strong><%= t 'employees.Name', default: 'not found'%>:</strong>
     <%= employee.name %>
   </p>
 
   <p>
-    <strong>Job:</strong>
+    <strong><%= t 'employees.Job', default: 'not exist'%>:</strong>
     <%= employee.job %>
   </p>
 
   <p>
-    <strong>Salary:</strong>
+    <strong><%= t 'employees.Salary', default: 'not exist'%>:</strong>
     <%= employee.salary %>
   </p>
 
   <p>
-    <strong>Employment status:</strong>
+    <strong><%= t 'employees.Employment status', default: 'not exist'%>:</strong>
     <%= employee.employment_status %>
   </p>
 
@@ -31,7 +31,7 @@
   <% end %>
 
   <p>
-    <strong>Team:</strong>
+    <strong><%= t 'employees.Team', default: 'not exist'%>:</strong>
     <%= team %>
   </p>
 
