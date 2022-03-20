@@ -14,33 +14,11 @@
  *= require_self
  */
 
- table {
-    border-collapse: collapse;
-    border-spacing: 0;
-    width: 100%;
-    border: 1px solid #ddd;
-    font-size: large;
-  }
-  
-  th, td {
-    text-align: left;
-    vertical-align: top;
-    padding: 16px;
-    text-align: center;
-  }
-  
-  th {
-    background-color: #f2f2f2;
-  }
-  
-  tr:nth-child(even) {
-    border: 1px solid #ddd;
-  }
-  
   .main {
-    margin-left: 140px; /* Same width as the sidebar + left position in px */
+    margin-left: 1%; /* Same width as the sidebar + left position in px */
     font-size: 20px;
-    padding: 0px 0px;
+    padding: 20px 0px;
+    margin-bottom: 20%;
   }
 
   .sign-out{
@@ -66,6 +44,7 @@
     text-decoration: none;
     font-size: 25px;
     margin-left: 10px;
+    margin-top: 10px;
   }
 
   .w3-sidebar{
@@ -138,7 +117,6 @@
     width: 80%;
   }
 
-  .main{
-    margin-left: 1%;
-    margin-bottom: 20%;
+  .users-header{
+    margin-bottom: 30px;
   }

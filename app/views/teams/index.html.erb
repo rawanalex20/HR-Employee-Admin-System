@@ -2,10 +2,11 @@
 
 <h1><%= t 'Teams', default: 'not exist'%></h1>
 
-<div class="new-record"><%= button_to t(".New team"), new_team_path, method: :get %></div>
+<div class="new-record"><%= button_to t(".New team"), new_team_path, method: :get, class:"btn btn-primary" %></div>
 
 <div id="teams">
-  <table>
+<table class="table table-hover">
+<thead>
   <tr>
     <th><%= t '.Name', default: 'not exist'%></th>
     <th><%= t '.Description', default: 'not exist'%></th>
@@ -13,6 +14,7 @@
     <th><%= t '.Team lead', default: 'not exist'%> </th>
     <th></th>
   </tr>
+  </thead>
 
   <% @teams.each do |team| %>
     <tr>
@@ -34,9 +36,9 @@
     </td>
     <td><%= lead %></td>
     <td>
-      <div class="tb-btns"><%= button_to t("Show"), team, method: :get %></div>
-      <div class="tb-btns"><%= button_to t("Edit"), edit_team_path(team), method: :get %></div>
-      <div class="tb-btns"><%= button_to t("Delete"), team, method: :delete %></div>
+      <div class="tb-btns"><%= button_to t("Show"), team, method: :get, class: "btn btn-secondary"  %></div>
+      <div class="tb-btns"><%= button_to t("Edit"), edit_team_path(team), method: :get, class: "btn btn-secondary"  %></div>
+      <div class="tb-btns"><%= button_to t("Delete"), team, method: :delete, class: "btn btn-secondary" %></div>
     </td>
     </tr>
     
