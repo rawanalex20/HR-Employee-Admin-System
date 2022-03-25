@@ -31,4 +31,12 @@ Run the following command to initialize server<br>
 
 https://user-images.githubusercontent.com/63899074/159155060-85fbd32b-ae55-4f69-8a09-a939544560ca.mp4
 
+## Testing
+
+for unit tests on meployee, run commands:
+```
+rails test test/controllers/employees_controller_test
+rails test test/models/employee_test
+```
+
 
