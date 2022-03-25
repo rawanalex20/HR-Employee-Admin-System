@@ -31,7 +31,7 @@ Run the following command to initialize server<br>
 
 To test mails install mailhog and check the right address and port used are added in developement environment settings
 
-Follow [Installation guide](https://github.com/mailhog/MailHog) 
+Follow [Installation guide](https://github.com/mailhog/MailHog)
 
 ## Demo
 
