@@ -1,11 +1,15 @@
 require "test_helper"
 
 class EmployeesControllerTest < ActionDispatch::IntegrationTest
+  include Devise::Test::IntegrationHelpers
   setup do
     @employee = employees(:one)
+    
+    sign_in users(:one)
   end
 
   test "should get index" do
+   
     get employees_url
     assert_response :success
   end
