@@ -217,7 +217,7 @@ ar:
     application:
       HREmployeeAdminSystem: "إدارة الموارد البشرية"
     top_nav:
-      lang: "العريبة"
+      lang: "العربية"
       Sign out: "خروج"
 
   devise:
