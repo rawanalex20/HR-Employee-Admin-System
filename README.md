@@ -4,7 +4,7 @@ HR Admin System manages human resources and their processes.
 
 ## Setup
 
-## Dependencies
+### Dependencies
 
 Required ruby, rails, node, npm, yarn and sqlite3 to be installed. 
 Versions used: ruby 3.0.3, Rails 7.0.1, node v14.15.5, npm 6.14.1, yarn 1.22.4 and sqlite3 3.37.2.
