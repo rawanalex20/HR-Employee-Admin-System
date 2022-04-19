@@ -2,29 +2,23 @@
 
 HR Admin System manages human resources and their processes.
 
-## Versions
+## Setup
 
-ruby 3.1.0<br>
-Rails 7.0.1
+### Dependencies
 
-## Dependencies
-
-System dependencies can be found in the gemfile in the root folder. Make sure the latest versions of the following tools are installed:
-
-- Ruby
-- Rails
-- Sqlite3
+Required ruby, rails, node, npm, yarn and sqlite3 to be installed. 
+Versions used: ruby 3.0.3, Rails 7.0.1, node v14.15.5, npm 6.14.1, yarn 1.22.4 and sqlite3 3.37.2.
 
 ### Installation
 
-Run the following command in the root directory to install all required gems<br>
+Run the following command in the root directory to install all required gems in gemfile<br>
 `bundle install`
 
-## Testing
+## Getting Started
 
 **Homepage**: http://127.0.0.1:3000/<br>
 
-Run the following command to initialize server<br>
+Run the following command to initialize local server<br>
 `rails server`
 
 ### Mailhog Setting
@@ -39,10 +33,13 @@ https://user-images.githubusercontent.com/63899074/159155060-85fbd32b-ae55-4f69-
 
 ## Testing
 
-for unit tests on meployee, run commands:
+rspec gem used for testing, run command:
+```
+rspec
+```
+
+for unit tests on employee without rspec, run commands:
 ```
 rails test test/controllers/employees_controller_test
 rails test test/models/employee_test
 ```
-
-
